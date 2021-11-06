@@ -1,0 +1,93 @@
+NOTES: 
+    we need an ID for each rover
+    each mission has one of three states{waiting, in exec, completed}
+    each rover has one of three states{ava, in exe, in checkup}
+OUTPUT:
+    what they need?
+
+    CONSOLE OUTPUT MODES
+    1- Interactive Mode:
+            -> current day
+            -> #waiting missions "IDs for each of them"
+            -> #in-exec missions/rovers "IDs for each one and which rover is 
+               doing this mission"
+            -> IDs for available rovers and total #
+            -> IDs for In-Checkup rovers and total #
+            -> IDs for completed Missions and total #
+            -> pause for user input
+
+    2- Step-By-Step Mode:
+            -> the same as the interactive but does not wait for input
+               which means it will sleep for some time and then continue
+               displying.
+
+    3- Silent Mode:
+            -> print simple text without any information about the simulation.
+    FILE OUTPUT
+            -> A list of structures containing information of each mission
+               those information are 
+               {
+                - ID , - complition day , - formlation day
+                - #waiting days, - #of in-execution days
+               }
+               this list should be sorted by comp. day or by in-exe days 
+               if comp. day is equal.
+            -> Statistics:
+                   * Total number of missions and number of each type
+                * Total number of rovers and number of each type
+                * avg waiting time and avg execution time
+                * precentage of auto promoted mountain missions
+
+            -> Since the output of the file containing statistics of the whole
+               simulation. This file should Not be generated while the simulation
+               is live. It should wait for the whole simulation to complete.
+               then the processing unit should take the list of missions and 
+               extract for it the information that should be printed in the file.
+
+Input for Console output:
+    current day, #of waiting missions, #of emergency waiting missions, IDs of emergencey
+    waiting missions, #of mountain waiting missions, IDs of mountain waiting missions,
+    #of polar waiting missions, IDs of polar waiting missions,..........
+Input for File output:
+    array of data should be printed by group of five (each line contains five elements).
+    followed be statistics.
+
+Missions:
+    has:
+        -> ID
+        -> Compeletion day
+        -> formlation day
+        -> assign day
+        -> waiting days
+        -> in-exe days ****
+        -> type {emerg, mount, polar}
+        -> target loc
+        -> mission dur
+        -> signif
+        -> daysToBePromoted "-1 unless it is a mountain mission"
+Rovers:
+    has:
+        -> type {emerg, mounta, polar}
+        -> checkup duration
+        -> missionsToCheckUp
+        -> speed
+Input File:
+     what we can get from it?
+        -> total number of rovers and number of each type
+        -> speed of each rover type
+        -> number of missions before need to checkup
+        -> check up duration for each rover type
+        -> number of DAYS for mountains missions to be promoted
+        -> Events "commands" "sorted by event day"
+           since they are soted by day of execution, it follows that we can put
+           them in a queue and execute them in order.
+           Note that: those commands are executed on MISSIONS and has no thing
+           to do with rovers.
+    what should IPU structure out of this information?
+        -> auto promotion limit for mountain missions"it is just a nuber"
+        -> A priorty queue for each rover type sorted by speed
+        -> command queue
+    what do you want from a rover?
+        -> if it is available it should be in a sorted list
+        -> should be deleted and inserted as fast as possible
+

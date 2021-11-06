@@ -1,0 +1,8 @@
+Naming Convention:
+	Any variable or function name should be camelCase (first word with small letter and the other words with capital letters)
+	e.g. daysToFinish, processInput()...
+	Any Class or structure or enum type name should be PascalCase first letters from every word capital
+	e.g. PriorityQueue, SimulationManager...
+	Any constant or enum constant should be all capital letters separated by '_'
+	e.g. PI = 3.14, enum ProcessState { OK, FAIL, FILE_NOT_EXIST }
+	name the file as the name of the class it contains so if you build a class name PriorityQueue then the file name is PriorityQueue.h
