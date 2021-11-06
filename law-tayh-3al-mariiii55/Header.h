@@ -5,4 +5,5 @@
 
 class input_device
 {
+	int v;
 };
