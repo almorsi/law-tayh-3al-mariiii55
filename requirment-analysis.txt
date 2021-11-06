@@ -84,7 +84,7 @@ Input File:
            Note that: those commands are executed on MISSIONS and has no thing
            to do with rovers.
     what should IPU structure out of this information?
-        -> auto promotion limit for mountain missions"it is just a nuber"
+        -> auto promotion limit for mountain missions"it is just a number"
         -> A priorty queue for each rover type sorted by speed
         -> command queue
     what do you want from a rover?
