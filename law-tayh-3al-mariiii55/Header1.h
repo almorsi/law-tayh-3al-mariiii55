@@ -7,4 +7,5 @@ private:
 	char islam;
 	bool aboyehia;
 	double abdulhameed;
+	int* mars;
 };
