@@ -19,13 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Data-Structures\vector.h" />
-    <ClInclude Include="Tests\vector_test.h" />
+    <ClInclude Include="Data-Structures\Vector.h" />
+    <ClInclude Include="Tests\VectorTest.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Data-Structures\vector.cpp" />
+    <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
+    <ClCompile Include="Data-Structures\Vector.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Tests\vector_test.cpp" />
+    <ClCompile Include="Tests\VectorTest.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
