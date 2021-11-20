@@ -24,6 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data-Structures\vector.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Tests\vector_test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
