@@ -7,7 +7,7 @@ Vector<T>::Vector()
 	begin(INITIAL_BEGIN),
 	end(INITIAL_END)
 {
-	array = new T[capacity](); // initialize the memory allocated to zero
+	array = new T[capacity](); // allocate memory and initialize to zero
 }
 
 template<typename T>
@@ -176,14 +176,6 @@ void Vector<T>::incrementEnd()
 }
 
 template<typename T>
-void Vector<T>::incrementBegin()
-{
-	if (getBegin() >= getEnd() - 1)
-		throw "too much begin increment";
-	begin++;
-}
-
-template<typename T>
 void Vector<T>::decrementBegin()
 {
 	--begin;
@@ -192,11 +184,18 @@ void Vector<T>::decrementBegin()
 }
 
 template<typename T>
+void Vector<T>::incrementBegin()
+{
+	if (getBegin() >= getEnd() - 1)
+		throw "too much begin increment";
+	begin++;
+}
+
+template<typename T>
 void Vector<T>::decrementEnd()
 {
 	if (getEnd() <= getBegin() + 1)
 		throw "too much deleting from the end";
-
 	end--;
 }
 
