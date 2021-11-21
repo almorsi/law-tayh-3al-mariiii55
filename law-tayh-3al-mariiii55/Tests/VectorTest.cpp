@@ -39,6 +39,8 @@ void VectorTest::runAllTests()
 	getLastShouldNotThrowExecptionOnNonEmptyVector();
 	setLastShouldThrowExectptionOnEmptyVector();
 	setLasatShouldNotThrowExecptionOnNonEmptyVector();
+	checkIfNumbersAreInCorrectSequence();
+	reverseTheSequenceAndCheckIfInNewCorrectSeqeunce();
 }
 
 void VectorTest::initializationTest()
@@ -368,6 +370,29 @@ void VectorTest::setLasatShouldNotThrowExecptionOnNonEmptyVector()
 		return;
 	}
 	assert(true);
+}
+
+void VectorTest::checkIfNumbersAreInCorrectSequence()
+{
+	Vector<int> v;
+	for (int i = 499; i >=0; i--)
+		v.insertBegin(i);
+	for (int i = 500; i < 1000; i++)
+		v.insertEnd(i);
+	for (int i = 0; i < 1000; i++)
+		assert(v.getAt(i) == i);
+}
+
+void VectorTest::reverseTheSequenceAndCheckIfInNewCorrectSeqeunce()
+{
+	Vector<int> v;
+	for (int i = 0; i < 1000; i++)
+		v.insertEnd(i);
+	for (int i = 999, j = 0; i >= 0; i--, j++)
+		v.setAt(j, i);
+	for (int i = 999, j = 0; i >= 0; i--, j++)
+		assert(v.getAt(j) == i);
+
 }
 
 

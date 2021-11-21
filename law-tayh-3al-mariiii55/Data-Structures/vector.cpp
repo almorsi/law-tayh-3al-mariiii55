@@ -61,7 +61,7 @@ T Vector<T>::getAt(long k) const
 	long realAddress;
 
 	realAddress = getRealAddress(k);
-	if (isValidRealAddress(realAddress))
+	if (isInValidRealAddress(realAddress))
 		throw "out of bound";
 	return array[realAddress];
 }
@@ -72,7 +72,7 @@ void Vector<T>::setAt(long k, T item)
 	long realAddress;
 
 	realAddress = getRealAddress(k);
-	if (isValidRealAddress(realAddress))
+	if (isInValidRealAddress(realAddress))
 		throw "out of bound error";
 
 	array[realAddress] = item;
@@ -201,7 +201,7 @@ void Vector<T>::decrementEnd()
 }
 
 template<typename T>
-bool Vector<T>::isValidRealAddress(long realAddress) const
+bool Vector<T>::isInValidRealAddress(long realAddress) const
 {
 	return realAddress <= getBegin() || realAddress >= getEnd();
 }

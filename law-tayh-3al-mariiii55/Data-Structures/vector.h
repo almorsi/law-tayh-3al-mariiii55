@@ -56,7 +56,7 @@ private:
 	void setCapacity(long);
 
 	long getRealAddress(long) const;
-	bool isValidRealAddress(long) const;
+	bool isInValidRealAddress(long) const;
 
 	bool isHasToResizeOnInsertion();
 };

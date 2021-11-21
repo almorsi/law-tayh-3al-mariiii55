@@ -41,5 +41,7 @@ private:
 	void getLastShouldNotThrowExecptionOnNonEmptyVector();
 	void setLastShouldThrowExectptionOnEmptyVector();
 	void setLasatShouldNotThrowExecptionOnNonEmptyVector();
+	void checkIfNumbersAreInCorrectSequence();
+	void reverseTheSequenceAndCheckIfInNewCorrectSeqeunce();
 };
 #endif
