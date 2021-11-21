@@ -9,6 +9,7 @@ public:
 	Vector();
 	~Vector();
 
+	// ALL THE PUBLIC FUNCTIONS RUN IN O(1)
 	void insertEnd(const T&);
 	void insertBegin(const T&);
 	void deleteBegin();
