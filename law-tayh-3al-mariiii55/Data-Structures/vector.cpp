@@ -3,9 +3,9 @@
 template<typename T>
 Vector<T>::Vector()
 	:
-	capacity(INITIIAL_CAPACITY),
-	begin(INITIIAL_BEGIN),
-	end(INITIIAL_END)
+	capacity(INITIAL_CAPACITY),
+	begin(INITIAL_BEGIN),
+	end(INITIAL_END)
 {
 	array = new T[capacity](); // initialize the memory allocated to zero
 }

@@ -33,9 +33,9 @@ private:
 	long begin;
 	long end;
 
-	static constexpr long INITIIAL_CAPACITY = 4;
-	static constexpr long INITIIAL_BEGIN = 1;
-	static constexpr long INITIIAL_END = 2;
+	static constexpr long INITIAL_CAPACITY = 4;
+	static constexpr long INITIAL_BEGIN = 1;
+	static constexpr long INITIAL_END = 2;
 
 	static constexpr long INSERTION_RESIZE_FACTOR = 2;
 	static constexpr double BEGIN_RATIO = 0.33;
