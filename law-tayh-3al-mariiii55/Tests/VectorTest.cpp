@@ -35,6 +35,10 @@ void VectorTest::runAllTests()
 	insertBegin1000ThenDeleteEnd500();
 	deleteEndShouldThrowExecptionOnDeletingMoreThanInserting();
 	deleteTheSameAmountAsInserting();
+	getLastShouldThrowExecptionOnEmptyVector();
+	getLastShouldNotThrowExecptionOnNonEmptyVector();
+	setLastShouldThrowExectptionOnEmptyVector();
+	setLasatShouldNotThrowExecptionOnNonEmptyVector();
 }
 
 void VectorTest::initializationTest()
@@ -301,6 +305,69 @@ void VectorTest::deleteTheSameAmountAsInserting()
 	for (int i = 0; i < 250; i++)
 		v.deleteEnd();
 	assert(v.getLength() == 0);
+}
+
+void VectorTest::getLastShouldThrowExecptionOnEmptyVector()
+{
+	Vector<int> v;
+	try
+	{
+		v.getLast();
+	}
+	catch (const char* e)
+	{
+		assert(true);
+		return;
+	}
+	assert(false);
+}
+
+void VectorTest::getLastShouldNotThrowExecptionOnNonEmptyVector()
+{
+	Vector<int> v;
+	try
+	{
+		v.insertBegin(2);
+		assert(v.getLast() == 2);
+	}
+	catch (const char* e)
+	{
+		assert(false);
+		return;
+	}
+	assert(true);
+}
+
+void VectorTest::setLastShouldThrowExectptionOnEmptyVector()
+{
+	Vector<int> v;
+	try
+	{
+		v.setLast(3);
+	}
+	catch (const char* e)
+	{
+		assert(true);
+		return;
+	}
+	assert(false);
+}
+
+void VectorTest::setLasatShouldNotThrowExecptionOnNonEmptyVector()
+{
+	Vector<int> v;
+	try
+	{
+		v.insertEnd(2);
+		v.setLast(3);
+		assert(v.getLast() == 3);
+	}
+	catch (const char* e)
+	{
+		assert(false);
+		return;
+	}
+	assert(true);
 }
 
 

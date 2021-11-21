@@ -37,5 +37,9 @@ private:
 	void insertBegin1000ThenDeleteEnd500();
 	void deleteEndShouldThrowExecptionOnDeletingMoreThanInserting();
 	void deleteTheSameAmountAsInserting();
+	void getLastShouldThrowExecptionOnEmptyVector();
+	void getLastShouldNotThrowExecptionOnNonEmptyVector();
+	void setLastShouldThrowExectptionOnEmptyVector();
+	void setLasatShouldNotThrowExecptionOnNonEmptyVector();
 };
 #endif

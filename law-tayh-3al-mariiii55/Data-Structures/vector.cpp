@@ -91,6 +91,18 @@ void Vector<T>::setFirst(T item)
 }
 
 template<typename T>
+T Vector<T>::getLast() const
+{
+	return getAt(getLength() - 1);
+}
+
+template<typename T>
+void Vector<T>::setLast(T item)
+{
+	setAt(getLength() - 1, item);
+}
+
+template<typename T>
 bool Vector<T>::isEmpty() const
 {
 	return getLength() == 0;
