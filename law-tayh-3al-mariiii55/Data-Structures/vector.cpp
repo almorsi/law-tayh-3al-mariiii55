@@ -3,11 +3,11 @@
 template<typename T>
 Vector<T>::Vector()
 	:
-	capacity(INITIIAL_CAPACITY),
-	begin(INITIIAL_BEGIN),
-	end(INITIIAL_END)
+	capacity(INITIAL_CAPACITY),
+	begin(INITIAL_BEGIN),
+	end(INITIAL_END)
 {
-	array = new T[capacity](); // initialize the memory allocated to zero
+	array = new T[capacity](); // allocate memory and initialize to zero
 }
 
 template<typename T>
@@ -61,7 +61,7 @@ T Vector<T>::getAt(long k) const
 	long realAddress;
 
 	realAddress = getRealAddress(k);
-	if (isValidRealAddress(realAddress))
+	if (isInValidRealAddress(realAddress))
 		throw "out of bound";
 	return array[realAddress];
 }
@@ -72,7 +72,7 @@ void Vector<T>::setAt(long k, T item)
 	long realAddress;
 
 	realAddress = getRealAddress(k);
-	if (isValidRealAddress(realAddress))
+	if (isInValidRealAddress(realAddress))
 		throw "out of bound error";
 
 	array[realAddress] = item;
@@ -88,6 +88,18 @@ template<typename T>
 void Vector<T>::setFirst(T item)
 {
 	setAt(0, item);
+}
+
+template<typename T>
+T Vector<T>::getLast() const
+{
+	return getAt(getLength() - 1);
+}
+
+template<typename T>
+void Vector<T>::setLast(T item)
+{
+	setAt(getLength() - 1, item);
 }
 
 template<typename T>
@@ -164,14 +176,6 @@ void Vector<T>::incrementEnd()
 }
 
 template<typename T>
-void Vector<T>::incrementBegin()
-{
-	if (getBegin() >= getEnd() - 1)
-		throw "too much begin increment";
-	begin++;
-}
-
-template<typename T>
 void Vector<T>::decrementBegin()
 {
 	--begin;
@@ -180,16 +184,23 @@ void Vector<T>::decrementBegin()
 }
 
 template<typename T>
+void Vector<T>::incrementBegin()
+{
+	if (getBegin() >= getEnd() - 1)
+		throw "too much begin increment";
+	begin++;
+}
+
+template<typename T>
 void Vector<T>::decrementEnd()
 {
 	if (getEnd() <= getBegin() + 1)
 		throw "too much deleting from the end";
-
 	end--;
 }
 
 template<typename T>
-bool Vector<T>::isValidRealAddress(long realAddress) const
+bool Vector<T>::isInValidRealAddress(long realAddress) const
 {
 	return realAddress <= getBegin() || realAddress >= getEnd();
 }
