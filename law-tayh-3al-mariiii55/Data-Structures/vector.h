@@ -9,6 +9,12 @@ public:
 	Vector();
 	~Vector();
 
+	//Disable copy and move constructors
+	Vector(const Vector&) = delete;
+	Vector operator=(const Vector&) = delete;
+	Vector(Vector&&) = delete;
+	Vector& operator=(const Vector&&) = delete;
+
 	// ALL THE PUBLIC FUNCTIONS RUN IN O(1)
 	void insertEnd(const T&);
 	void insertBegin(const T&);
