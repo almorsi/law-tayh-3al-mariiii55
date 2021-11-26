@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data-Structures\HeapNode.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Tests\VectorTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
+    <ClCompile Include="Data-Structures\HeapNode.cpp" />
     <ClCompile Include="Data-Structures\Vector.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tests\VectorTest.cpp" />
