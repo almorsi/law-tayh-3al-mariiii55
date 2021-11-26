@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="commands\Command.h" />
     <ClInclude Include="Data-Structures\HeapNode.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />

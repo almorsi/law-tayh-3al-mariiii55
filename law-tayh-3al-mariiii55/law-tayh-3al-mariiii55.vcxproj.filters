@@ -48,6 +48,9 @@
     <ClInclude Include="IO\FileInputDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="commands\Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
