@@ -48,6 +48,18 @@
     <ClInclude Include="IO\FileInputDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="commands\Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\FormulationCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\CancellationCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\PromotionCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="IO\Observer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -93,6 +105,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IO\FileInputDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\FormulationCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\CancellationCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\PromotionCommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IO\OutputProcessingUnit.cpp">

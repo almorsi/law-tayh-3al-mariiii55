@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="commands\CancellationCommand.h" />
+    <ClInclude Include="commands\Command.h" />
+    <ClInclude Include="commands\FormulationCommand.h" />
+    <ClInclude Include="commands\PromotionCommand.h" />
     <ClInclude Include="Data-Structures\HeapNode.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />
@@ -36,6 +40,9 @@
     <ClInclude Include="Tests\VectorTest.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="commands\CancellationCommand.cpp" />
+    <ClCompile Include="commands\FormulationCommand.cpp" />
+    <ClCompile Include="commands\PromotionCommand.cpp" />
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
     <ClCompile Include="Data-Structures\HeapNode.cpp" />
     <ClCompile Include="Data-Structures\Keyable.cpp" />
