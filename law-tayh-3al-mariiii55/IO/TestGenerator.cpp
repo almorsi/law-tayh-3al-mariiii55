@@ -35,7 +35,7 @@ void TestGenerator::fillInRanges()
 	checkupDuration = { 5, 15 };//days
 	missionsBeforeCheckup = { 5, 10 };
 	autoPromotionLimit = { 10, 30 };//days
-	numOfEvents = { 20, 50 };
+	numOfEvents = { 40, 50 };
 	eventType = { 0, 2 };
 	targetLocation = { 100, 1000 };//kilometers
 	missionDuration = { 2, 15 };//days
@@ -48,20 +48,26 @@ void TestGenerator::generateTestCase()
 	int nEvents;
 	int randomEventType;
 
+	// number of rover of each type M, P, E
 	range = std::uniform_int_distribution<>(rover.min, rover.max);
 	fs << range(rng) << '\t' << range(rng) << '\t' << range(rng) << '\n';
 
+	// speed of each rover type M, P, E
 	range = std::uniform_int_distribution<>(roverSpeed.min, roverSpeed.max);
 	fs << range(rng) << '\t' << range(rng) << '\t' << range(rng) << '\n';
 
-	range = std::uniform_int_distribution<>(checkupDuration.min, checkupDuration.max);
-	fs << range(rng) << '\t' << range(rng) << '\t' << range(rng) << '\t';
+	// number of missions before checkup for any rover type
 	range = std::uniform_int_distribution<>(missionsBeforeCheckup.min, missionsBeforeCheckup.max);
-	fs << range(rng) << '\n';
+	fs << range(rng) << '\t';
+	// number of check up days for M, P, E
+	range = std::uniform_int_distribution<>(checkupDuration.min, checkupDuration.max);
+	fs << range(rng) << '\t' << range(rng) << '\t' << range(rng) << '\n';
 
+	// auto promotion limit for mountain missions
 	range = std::uniform_int_distribution<>(autoPromotionLimit.min, autoPromotionLimit.max);
 	fs << range(rng) << '\n';
 
+	// total number of events in this test case
 	range = std::uniform_int_distribution<>(numOfEvents.min, numOfEvents.max);
 	nEvents = range(rng);
 	fs << nEvents << '\n';
@@ -79,7 +85,7 @@ void TestGenerator::generateTestCase()
 			break;
 		case CANCELATION_ET:
 		{
-			if (mountainMissionIds.getLength() < 3)
+			if (mountainMissionIds.getLength() < 5)
 			{
 				nEvents++;
 				break;
@@ -90,7 +96,7 @@ void TestGenerator::generateTestCase()
 		}
 		case PROMOTION_ET:
 		{
-			if (mountainMissionIds.getLength() < 3)
+			if (mountainMissionIds.getLength() < 5)
 			{
 				nEvents++;
 				break;
@@ -164,6 +170,7 @@ void TestGenerator::addCancelationEvent()
 	missionIndexToDelete = range(rng);
 	fs << mountainMissionIds.getAt(missionIndexToDelete) << '\n';
 
+	// delete the id for the canceld mountain mision from the array, this to avoid recancel the same mission again which make nosence
 	std::swap(mountainMissionIds.getAt(missionIndexToDelete), mountainMissionIds.getLast());
 	mountainMissionIds.deleteEnd();
 }
@@ -183,6 +190,7 @@ void TestGenerator::addPromotionEvent()
 	missionIndexToPromote = range(rng);
 	fs << mountainMissionIds.getAt(missionIndexToPromote) << '\n';
 
+	// delete the id of the promoted mission from the ids of mountain missions this to avoid repromote the same mission again
 	std::swap(mountainMissionIds.getAt(missionIndexToPromote), mountainMissionIds.getLast());
 	mountainMissionIds.deleteEnd();
 }
