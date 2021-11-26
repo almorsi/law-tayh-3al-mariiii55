@@ -1,5 +1,6 @@
 #ifndef OUTPUTDEVICE_H
 #define OUTPUTDEVICE_H
+
 #include "Observer.h"
 #include "OutputProcessingUnit.h"
 #include "..\Data-Structures\vector.h"
@@ -13,6 +14,7 @@ public:
 		processedData(nullptr)
 	{
 	}
+
 	virtual ~OutputDevice(){}
 
 	virtual void update() = 0;
