@@ -1,5 +1,6 @@
 #include "Tests/VectorTest.h"
 #include "Tests/HeapNodeTest.h"
+#include "Tests/MaxHeapTest.h"
 
 int main(void)
 {
@@ -9,5 +10,7 @@ int main(void)
 	HeapNodeTest hnt;
 	hnt.runAllTests();
 
+	MaxHeapTest mh;
+	mh.runAllTests();
 	return 0;
 }

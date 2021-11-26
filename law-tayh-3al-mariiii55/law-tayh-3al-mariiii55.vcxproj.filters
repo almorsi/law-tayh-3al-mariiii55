@@ -30,6 +30,12 @@
     <ClInclude Include="Tests\HeapNodeTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\MaxHeapTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data-Structures\MaxHeap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +54,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Tests\HeapNodeTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\MaxHeapTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data-Structures\MaxHeap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
