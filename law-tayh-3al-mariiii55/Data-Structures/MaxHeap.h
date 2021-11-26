@@ -8,15 +8,15 @@ class MaxHeap
 {
 public:
 	MaxHeap();
-	MaxHeap(const Vector<Keyable*>&); //O(n)
+	MaxHeap(const Vector<Keyable*>&);
 	~MaxHeap();
 
 	long getSize() const;
 	bool isEmpty() const;
 
-	void insert(Keyable*); //O( lg(n) )
-	Keyable* getMax()const; //O(1)
-	Keyable* extractMax();  //O( lg(n) )
+	void insert(Keyable*);
+	Keyable* getMax()const;
+	Keyable* extractMax();
 	
 private:
 	long getParentIndexOfChildAt(long);
