@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Tests\VectorTest.h" />
   </ItemGroup>
