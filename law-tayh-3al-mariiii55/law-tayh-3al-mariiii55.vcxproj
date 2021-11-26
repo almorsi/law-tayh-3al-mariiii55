@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="commands\CancellationCommand.h" />
     <ClInclude Include="commands\Command.h" />
     <ClInclude Include="commands\FormulationCommand.h" />
     <ClInclude Include="Data-Structures\HeapNode.h" />
@@ -34,6 +35,7 @@
     <ClInclude Include="Tests\VectorTest.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="commands\CancellationCommand.cpp" />
     <ClCompile Include="commands\FormulationCommand.cpp" />
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
     <ClCompile Include="Data-Structures\HeapNode.cpp" />

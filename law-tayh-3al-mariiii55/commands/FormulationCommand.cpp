@@ -1,9 +1,8 @@
 #include "FormulationCommand.h"
 
-FormulationCommand::FormulationCommand(/*StationData* sd,*/ MissionFormulationData mfd)
-	:
-	/*Command(sd),*/
-	mfd(mfd)
+FormulationCommand::FormulationCommand(/*StationData* sd, MissionData mfd*/)
+	//:
+	/*Command(sd, mfd)*/
 {
 }
 

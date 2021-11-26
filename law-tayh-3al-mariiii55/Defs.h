@@ -20,7 +20,7 @@ enum MissionType
 	MOUNTAIN_MISSION_MT
 };
 
-struct MissionFormulationData
+struct MissionData
 {
 	MissionType missionType;
 	int eventDay;

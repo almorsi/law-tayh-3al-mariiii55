@@ -7,13 +7,13 @@
 class FormulationCommand : public Command
 {
 public:
-	FormulationCommand(/*StationData*,*/ MissionFormulationData);
+	FormulationCommand(/*StationData*, MissionData*/);
 	~FormulationCommand();
 
 	virtual void execute();
 
 private:
-	MissionFormulationData mfd;
+	MissionData mfd;
 };
 
 #endif // !FORMULATIONCOMMAND_H
