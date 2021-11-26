@@ -6,6 +6,7 @@
 class HeapNode
 {
 public:
+	HeapNode();
 	HeapNode(Keyable*);
 	~HeapNode();
 

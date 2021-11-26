@@ -1,6 +1,12 @@
 #include <climits>
 #include "HeapNode.h"
 
+HeapNode::HeapNode()
+	:
+	data(nullptr)
+{
+}
+
 HeapNode::HeapNode(Keyable* data_v)
 	:
 	data(data_v)
