@@ -15,7 +15,7 @@ Vector<T>::Vector()
 template<typename T>
 Vector<T>::~Vector()
 {
-	delete array;
+	delete [] array;
 }
 
 template<typename T>
