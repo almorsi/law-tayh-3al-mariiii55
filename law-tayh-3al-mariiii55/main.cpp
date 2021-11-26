@@ -1,6 +1,7 @@
 #include "Tests/VectorTest.h"
 #include "Tests/HeapNodeTest.h"
 #include "Tests/MaxHeapTest.h"
+#include "IO/TestGenerator.h"
 
 int main(void)
 {
@@ -12,5 +13,9 @@ int main(void)
 
 	MaxHeapTest mh;
 	mh.runAllTests();
+
+	TestGenerator tg("test.txt");
+	if (tg.canGenerateTestCase())
+		tg.generateTestCase();
 	return 0;
 }

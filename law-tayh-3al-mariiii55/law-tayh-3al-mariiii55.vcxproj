@@ -23,6 +23,8 @@
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
+    <ClInclude Include="Defs.h" />
+    <ClInclude Include="IO\TestGenerator.h" />
     <ClInclude Include="Tests\HeapNodeTest.h" />
     <ClInclude Include="Tests\MaxHeapTest.h" />
     <ClInclude Include="Tests\VectorTest.h" />
@@ -33,6 +35,7 @@
     <ClCompile Include="Data-Structures\Keyable.cpp" />
     <ClCompile Include="Data-Structures\MaxHeap.cpp" />
     <ClCompile Include="Data-Structures\Vector.cpp" />
+    <ClCompile Include="IO\TestGenerator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tests\HeapNodeTest.cpp" />
     <ClCompile Include="Tests\MaxHeapTest.cpp" />
