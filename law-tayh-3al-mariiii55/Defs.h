@@ -13,4 +13,21 @@ enum EventType
 	PROMOTION_ET
 };
 
+enum MissionType
+{
+	EMERGENCY_MISSION_MT,
+	POLAR_MISSION_MT,
+	MOUNTAIN_MISSION_MT
+};
+
+struct MissionFormulationData
+{
+	MissionType missionType;
+	int eventDay;
+	int missionId;
+	int targetLocation;
+	int missionDuration;
+	int significance;
+};
+
 #endif // !DEFS_H

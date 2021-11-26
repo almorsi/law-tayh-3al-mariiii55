@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\Command.h" />
+    <ClInclude Include="commands\FormulationCommand.h" />
     <ClInclude Include="Data-Structures\HeapNode.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />
@@ -33,6 +34,7 @@
     <ClInclude Include="Tests\VectorTest.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="commands\FormulationCommand.cpp" />
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
     <ClCompile Include="Data-Structures\HeapNode.cpp" />
     <ClCompile Include="Data-Structures\Keyable.cpp" />
