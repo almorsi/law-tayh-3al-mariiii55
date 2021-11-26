@@ -5,6 +5,7 @@ class Keyable
 public:
 	Keyable();
 	virtual ~Keyable();
+
 	virtual void setKey(long);
 	virtual long getKey() const;
 	virtual void increaseKeyBy(long);

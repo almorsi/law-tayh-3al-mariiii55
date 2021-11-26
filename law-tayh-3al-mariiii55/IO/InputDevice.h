@@ -7,6 +7,7 @@ class InputDevice
 public:
 	InputDevice() {};
 	virtual ~InputDevice() {};
+
 	virtual void setInputSource(const char*) = 0;
 	virtual bool canParseInputFromSource() const = 0;
 	virtual Vector<int>* getParsedInput() = 0;
