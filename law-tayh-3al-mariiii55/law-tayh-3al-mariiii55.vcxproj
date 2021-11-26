@@ -24,6 +24,7 @@
     <ClInclude Include="Data-Structures\MaxHeap.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Defs.h" />
+    <ClInclude Include="IO\InputDevice.h" />
     <ClInclude Include="IO\TestGenerator.h" />
     <ClInclude Include="Tests\HeapNodeTest.h" />
     <ClInclude Include="Tests\MaxHeapTest.h" />
