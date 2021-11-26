@@ -136,13 +136,3 @@ void HeapNodeTest::heapNodeShouldThrowExecptionOnIncreasingKeyOverflow()
 	}
 	assert(false);
 }
-
-void Dummy::setKey(long k)
-{
-	key = k;
-}
-
-long Dummy::getKey() const
-{
-	return key;
-}

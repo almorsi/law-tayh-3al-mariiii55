@@ -3,8 +3,11 @@
 class Keyable
 {
 public:
-	virtual void setKey(long) = 0;
-	virtual long getKey() const = 0;
+	Keyable();
+	virtual ~Keyable();
+	virtual void setKey(long);
+	virtual long getKey() const;
+	virtual void increaseKeyBy(long);
 protected:
 	long key{ -1 };
 };

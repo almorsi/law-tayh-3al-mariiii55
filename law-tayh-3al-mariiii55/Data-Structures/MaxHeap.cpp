@@ -4,7 +4,7 @@ MaxHeap::MaxHeap()
 {
 }
 
-MaxHeap::MaxHeap(Vector<HeapNode*>)
+MaxHeap::MaxHeap(Vector<Keyable*>)
 {
 }
 
@@ -22,18 +22,18 @@ bool MaxHeap::isEmpty() const
     return heap.isEmpty();
 }
 
-void MaxHeap::insert(HeapNode* hn)
+void MaxHeap::insert(Keyable* hn)
 {
     heap.insertEnd(hn);
 }
 
 
-HeapNode* MaxHeap::getMax() const
+Keyable* MaxHeap::getMax() const
 {
     return heap.getFirst();
 }
 
-HeapNode* MaxHeap::extractMax()
+Keyable* MaxHeap::extractMax()
 {
     return nullptr;
 }

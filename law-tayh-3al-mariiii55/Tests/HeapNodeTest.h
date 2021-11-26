@@ -5,9 +5,6 @@
 
 class Dummy : public Keyable
 {
-public:
-	void setKey(long);
-	long getKey() const;
 };
 
 class HeapNodeTest
