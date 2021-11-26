@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <cmath>
 #include "Vector.h"
 
 template<typename T>
@@ -13,7 +15,7 @@ Vector<T>::Vector()
 template<typename T>
 Vector<T>::~Vector()
 {
-	delete array;
+	delete [] array;
 }
 
 template<typename T>
@@ -56,7 +58,7 @@ void Vector<T>::deleteEnd()
 
 
 template<typename T>
-T Vector<T>::getAt(long k) const
+T& Vector<T>::getAt(long k) const
 {
 	long realAddress;
 
@@ -79,7 +81,7 @@ void Vector<T>::setAt(long k, T item)
 }
 
 template<typename T>
-T Vector<T>::getFirst() const
+T& Vector<T>::getFirst() const
 {
 	return getAt(0);
 }
@@ -91,7 +93,7 @@ void Vector<T>::setFirst(T item)
 }
 
 template<typename T>
-T Vector<T>::getLast() const
+T& Vector<T>::getLast() const
 {
 	return getAt(getLength() - 1);
 }

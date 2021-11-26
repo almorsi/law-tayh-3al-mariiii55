@@ -1,6 +1,6 @@
 #ifndef VECTOR_H
 #define VECTOR_H
-#include <cmath>
+
 
 template <typename T>
 class Vector
@@ -21,12 +21,12 @@ public:
 	void deleteBegin();
 	void deleteEnd();
 
-	T getFirst()const;
+	T& getFirst()const;
 	void setFirst(T);
-	T getLast() const;
+	T& getLast() const;
 	void setLast(T);
 
-	T getAt(long k) const;
+	T& getAt(long k) const;
 	void setAt(long, T);
 
 	long getCapacity() const;
