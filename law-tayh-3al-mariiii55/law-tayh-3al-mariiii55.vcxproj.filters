@@ -45,6 +45,9 @@
     <ClInclude Include="IO\InputDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IO\FileInputDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -75,6 +78,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IO\TestGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\FileInputDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
