@@ -8,7 +8,7 @@ class MaxHeap
 {
 public:
 	MaxHeap();
-	MaxHeap(Vector<Keyable*>); //O(n)
+	MaxHeap(const Vector<Keyable*>&); //O(n)
 	~MaxHeap();
 
 	long getSize() const;

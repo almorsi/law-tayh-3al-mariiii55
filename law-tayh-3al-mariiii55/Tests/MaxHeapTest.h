@@ -12,7 +12,13 @@ public:
 private:
 	void maxHeapCreation();
 	void maxHeapInitialyIsEmpty();
-	void sizeAfterInserting5ElementsShouldBe5();
+	void sizeAfterInserting5NullElementsShouldBe0();
+	void insertMaxElementLastTheRequestTheMax();
+	void buildAMaxHeapFromAnUnsortedVector();
+	void testNextMaxAfterExtractOldMax();
+	void shouldThrowExeceptionWhenExtractingFromEmptyHeap();
+	void shouldTrhowExeceptionWhenGettingMaxOfAnEmptyHeap();
+	void shouldBeEmptyAfterBuildingWithEmptyVector();
 };
 
 #endif // !MAXHEAPTEST_H
