@@ -28,6 +28,7 @@
     <ClInclude Include="IO\InputDevice.h" />
     <ClInclude Include="IO\Observable.h" />
     <ClInclude Include="IO\Observer.h" />
+    <ClInclude Include="IO\OutputDeviceh.h" />
     <ClInclude Include="IO\OutputProcessingUnit.h" />
     <ClInclude Include="IO\TestGenerator.h" />
     <ClInclude Include="Tests\HeapNodeTest.h" />
