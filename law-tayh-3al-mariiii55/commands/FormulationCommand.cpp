@@ -13,7 +13,8 @@ FormulationCommand::~FormulationCommand()
 void FormulationCommand::execute()
 {
 	/*shoud formulate and add a mission to its apropriate data structure in StationData*/
-	switch (mfd.missionType)
+	/**
+	switch (md.missionType)
 	{
 	case EMERGENCY_MISSION_MT:
 		break;
@@ -24,4 +25,5 @@ void FormulationCommand::execute()
 	default:
 		break;
 	}
+	*/
 }
