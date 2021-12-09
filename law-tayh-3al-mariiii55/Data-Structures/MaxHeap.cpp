@@ -6,17 +6,19 @@ MaxHeap::MaxHeap()
 {
 }
 
-MaxHeap::MaxHeap(const Vector<Keyable*>& vk)
-{
-    for (long i = 0; i < vk.getLength(); i++)
-        heap.insertEnd(vk.getAt(i));
-    
-    for (long i = getParentIndexOfChildAt(heap.getLength() - 1); i >= 0; i--)
-        siftDown(i);
-}
-
 MaxHeap::~MaxHeap()
 {
+}
+
+MaxHeap::MaxHeap(const Vector<Keyable*>& vk)
+{
+    long i;
+
+    for (i = 0; i < vk.getLength(); i++)
+        heap.insertEnd(vk.getAt(i));
+    
+    for (i = getParentIndexOfChildAt(heap.getLength() - 1); i >= 0; i--)
+        siftDown(i);
 }
 
 long MaxHeap::getSize() const
@@ -31,7 +33,7 @@ bool MaxHeap::isEmpty() const
 
 void MaxHeap::insert(Keyable* it)
 {
-    if (!it) return;
+    if (!it) return; /*NOT allowed to store nullptr*/
 
     heap.insertEnd(it);
     siftUp(getSize() - 1);
@@ -91,7 +93,7 @@ void MaxHeap::siftUp(long i)
 
     childIndex = i; parentIndex = getParentIndexOfChildAt(childIndex);
     
-    if (parentIndex == -1) //ith node is the root node
+    if (parentIndex == -1) //root node
         return;
     
     if (heap.getAt(childIndex)->getKey() > heap.getAt(parentIndex)->getKey())
