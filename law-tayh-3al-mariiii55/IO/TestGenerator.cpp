@@ -48,6 +48,9 @@ void TestGenerator::generateTestCase()
 	int nEvents;
 	int randomEventType;
 
+	if (!canGenerateTestCase())
+		throw "can't generate test case <file not opend>";
+
 	// number of rover of each type M, P, E
 	range = std::uniform_int_distribution<>(rover.min, rover.max);
 	fs << range(rng) << '\t' << range(rng) << '\t' << range(rng) << '\n';
@@ -114,6 +117,8 @@ void TestGenerator::generateTestCase()
 
 	} while (--nEvents);
 
+	fileState = false;
+	fs.close();//to prevent function side effect
 }
 
 void TestGenerator::addFormulationEvent()

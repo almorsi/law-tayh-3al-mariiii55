@@ -14,8 +14,10 @@ public:
 	~TestGenerator();
 
 	bool canGenerateTestCase() const;
-	void fillInRanges();
 	void generateTestCase();
+
+private:
+	void fillInRanges();
 	void addFormulationEvent();
 	void addCancelationEvent();
 	void addPromotionEvent();
