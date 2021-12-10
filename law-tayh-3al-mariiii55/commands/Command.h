@@ -7,7 +7,7 @@
 class Command
 {
 public:
-	Command(/*StationData* sd, MissionData md*/)
+	Command(/*StationData* sd, MissionInputData md*/)
 		//:
 		//sd(sd),
 		//md(md)
@@ -19,7 +19,7 @@ public:
 	virtual void execute() = 0;
 protected:
 	//StationData* sd;
-	//MissionData md;
+	//MissionInputData md;
 };
 
 #endif

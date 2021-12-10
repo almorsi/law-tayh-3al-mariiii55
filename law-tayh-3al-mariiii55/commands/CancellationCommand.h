@@ -5,7 +5,7 @@
 class CancellationCommand : public Command
 {
 public:
-	CancellationCommand(/*StationData*, MissionData mcd*/);
+	CancellationCommand(/*StationData*, MissionInputData mcd*/);
 	virtual ~CancellationCommand();
 
 	virtual void execute();

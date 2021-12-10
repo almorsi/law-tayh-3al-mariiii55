@@ -12,7 +12,7 @@
 class OutputProcessingUnit : public Observable
 {
 public:
-	OutputProcessingUnit();
+	OutputProcessingUnit(/*StationData* */);
 	~OutputProcessingUnit();
 
 
@@ -24,7 +24,7 @@ public:
 	void clearProcessedData();
 
 	/*
-	* the only class how can change the behavior is the simulation manager
+	* the only class can change the behavior is the simulation manager
 	* void setProcessingBehavior(OutputProcessingBehavior*);
 	*/
 
@@ -32,6 +32,9 @@ private:
 	Vector<int>* processedData;
 	/*
 	* OutputProcessingBehavior* processingBehavior;
+	*/
+	/*
+	* StationData* stationData;
 	*/
 };
 #endif // !OUTPUTPROCESSINGUNIT_H

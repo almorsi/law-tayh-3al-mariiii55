@@ -8,6 +8,7 @@ struct Range
 
 enum EventType
 {
+	NONE_ET,
 	FORMULATION_ET,
 	CANCELATION_ET,
 	PROMOTION_ET
@@ -15,12 +16,13 @@ enum EventType
 
 enum MissionType
 {
+	NONE_MT,
 	EMERGENCY_MISSION_MT,
 	POLAR_MISSION_MT,
 	MOUNTAIN_MISSION_MT
 };
 
-struct MissionData
+struct MissionInputData
 {
 	MissionType missionType;
 	int eventDay;
