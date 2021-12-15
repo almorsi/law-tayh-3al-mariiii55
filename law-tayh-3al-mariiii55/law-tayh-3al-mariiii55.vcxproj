@@ -47,7 +47,6 @@
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
     <ClCompile Include="Data-Structures\HeapNode.cpp" />
     <ClCompile Include="Data-Structures\Keyable.cpp" />
-    <ClCompile Include="Data-Structures\MAINABDULHAMEED.cpp" />
     <ClCompile Include="Data-Structures\MaxHeap.cpp" />
     <ClCompile Include="Data-Structures\Queue.cpp" />
     <ClCompile Include="Data-Structures\Vector.cpp" />

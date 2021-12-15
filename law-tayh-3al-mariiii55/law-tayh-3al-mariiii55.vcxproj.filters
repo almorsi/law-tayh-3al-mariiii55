@@ -125,8 +125,5 @@
     <ClCompile Include="Data-Structures\Queue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data-Structures\MAINABDULHAMEED.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
