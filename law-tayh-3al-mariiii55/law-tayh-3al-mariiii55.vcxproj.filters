@@ -72,6 +72,9 @@
     <ClInclude Include="IO\OutputDeviceh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Data-Structures\Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -117,6 +120,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IO\OutputProcessingUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data-Structures\Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data-Structures\MAINABDULHAMEED.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

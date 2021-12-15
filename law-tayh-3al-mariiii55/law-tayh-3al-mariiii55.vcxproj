@@ -26,6 +26,7 @@
     <ClInclude Include="Data-Structures\HeapNode.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />
+    <ClInclude Include="Data-Structures\Queue.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Defs.h" />
     <ClInclude Include="IO\FileInputDevice.h" />
@@ -46,7 +47,9 @@
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
     <ClCompile Include="Data-Structures\HeapNode.cpp" />
     <ClCompile Include="Data-Structures\Keyable.cpp" />
+    <ClCompile Include="Data-Structures\MAINABDULHAMEED.cpp" />
     <ClCompile Include="Data-Structures\MaxHeap.cpp" />
+    <ClCompile Include="Data-Structures\Queue.cpp" />
     <ClCompile Include="Data-Structures\Vector.cpp" />
     <ClCompile Include="IO\FileInputDevice.cpp" />
     <ClCompile Include="IO\OutputProcessingUnit.cpp" />
