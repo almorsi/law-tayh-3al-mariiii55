@@ -144,6 +144,8 @@
     <ClCompile Include="IO\OutputProcessingUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Data-Structures\SortedLinkedList.cpp">
+      <Filter>Source Files</Filter>
     <ClCompile Include="Data-Structures\Queue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -168,10 +170,13 @@
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="Data-Structures\Node.cpp">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data-Structures\SortedLinkedList.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="Data-Structures\doublyNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data-Structures\DoublyLinkedList.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
