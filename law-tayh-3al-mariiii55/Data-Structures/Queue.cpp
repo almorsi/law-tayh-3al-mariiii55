@@ -21,13 +21,13 @@ bool Queue<T>::isEmpty() const
 template< class T>
 void  Queue<T>::enqueue(const T& x)
 {
-	vector.inser&tEnd(x);
+	vector.insertEnd(x);
 }
 
 template< class T>
 T& Queue<T>::dequeue()
 {
-		T data;
+		T& data;
 
 		data = vector.getFirst();
 		vector.deleteBegin();
