@@ -17,6 +17,11 @@ Node* SortedLinkedList::getHead()
 	return Head;
 }
 
+int SortedLinkedList::getSize()
+{
+	return size;
+}
+
 void SortedLinkedList::setHead(Node* h)
 {
 	Head = h;
@@ -24,6 +29,7 @@ void SortedLinkedList::setHead(Node* h)
 
 bool SortedLinkedList::insert(Keyable* item)
 {
+	size++;
 	Node* X = new Node(item);
 	if (Head == nullptr)
 	{

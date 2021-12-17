@@ -6,6 +6,7 @@ doublyLinkedList<T>::doublyLinkedList()
 {
 	Head = nullptr;
 	Tail = nullptr;
+	size = 0;
 }
 
 template<typename T>
@@ -21,6 +22,12 @@ doublyNode<T>* doublyLinkedList<T>::getTail()
 }
 
 template<typename T>
+int doublyLinkedList<T>::getSize()
+{
+	return size;
+}
+
+template<typename T>
 void doublyLinkedList<T>::insertEnd(T item)
 {
 	doublyNode<T>* X = new doublyNode<T>(item);
@@ -30,6 +37,7 @@ void doublyLinkedList<T>::insertEnd(T item)
 		X->setPrev(Head);
 		Head = X;
 		Tail = X;
+		size++;
 	}
 	else
 	{
@@ -41,8 +49,10 @@ void doublyLinkedList<T>::insertEnd(T item)
 		X->setPrev(h);
 		h->setNext(X);
 		Tail = X;
+		size++;
 	}
 }
+
 
 template<typename T>
 void doublyLinkedList<T>::print()
