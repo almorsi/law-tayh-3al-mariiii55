@@ -33,7 +33,21 @@ struct MissionInputData
 	int significance;
 };
 
+struct Mission
+{
+	int ID;
+	int compeletionDay;
+	int formlationDay;
+	int assignDay;
+	int waitingDays;
+	int inExecutionDays;
+	MissionType type;
+	int targetLocation;
+	int missionDuration;
+	int significance;
+	int daysToBePromoted;
 
+};
 enum RoverType
 {
 	R_NONE_RT,
@@ -48,6 +62,15 @@ struct Rover
 	RoverType rovertype;
 	int checkUpDuration;
 	int speed;
+	int missionsToCheckUp;
+};
+
+
+struct inExecute
+{
+	int daysToFinish;
+	Mission* mission;
+	Rover* rover;
 };
 
 #endif // !DEFS_H
