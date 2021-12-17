@@ -1,6 +1,8 @@
 #include <iostream>
 
-#include "Silent.h"
+#include "SilentConsoleBehaviour.h"
+
+using namespace std;
 
 void SilentConsoleBehaviour::print(Vector<int>*)
 {

@@ -28,7 +28,7 @@
     <ClCompile Include="Tests\HeapNodeTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IO\Interactive.cpp">
+    <ClCompile Include="IO\InteractiveConsoleBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Data-Structures\Keyable.cpp">
@@ -55,13 +55,13 @@
     <ClCompile Include="Data-Structures\Queue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IO\Silent.cpp">
+    <ClCompile Include="IO\SilentConsoleBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Data-Structures\SortedLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IO\Step.cpp">
+    <ClCompile Include="IO\StepConsoleBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IO\TestGenerator.cpp">
@@ -111,7 +111,7 @@
     <ClInclude Include="IO\InputDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\Interactive.h">
+    <ClInclude Include="IO\InteractiveConsoleBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Data-Structures\Keyable.h">
@@ -144,13 +144,13 @@
     <ClInclude Include="Data-Structures\Queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\Silent.h">
+    <ClInclude Include="IO\SilentConsoleBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Data-Structures\SortedLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\Step.h">
+    <ClInclude Include="IO\StepConsoleBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IO\TestGenerator.h">
