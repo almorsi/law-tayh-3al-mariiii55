@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Silent.h"
+#include "SilentConsoleBehaviour.h"
 
 void SilentConsoleBehaviour::print(Vector<int>*)
 {

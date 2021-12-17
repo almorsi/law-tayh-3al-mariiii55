@@ -7,3 +7,4 @@ class SilentConsoleBehaviour : public ConsoleBehaviour
 public:
 	virtual void print(Vector<int>*);
 };
+
