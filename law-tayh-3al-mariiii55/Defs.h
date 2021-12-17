@@ -32,4 +32,19 @@ struct MissionInputData
 	int significance;
 };
 
+enum RoverType
+{
+	NONE_RT,
+	EMERGENCY_MISSION_MT,
+	POLAR_MISSION_MT,
+	MOUNTAIN_MISSION_MT
+};
+
+
+struct RoverInputData
+{
+	RoverType rovertype;
+	int checkUpDuration;
+	int speed;
+};
 #endif // !DEFS_H
