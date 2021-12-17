@@ -162,10 +162,10 @@
     <ClInclude Include="Tests\VectorTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ProcessingBehavior.h">
+    <ClInclude Include="commands\ConsoleProcessingBehavior.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="commands\ConsoleProcessingBehavior.h">
+    <ClInclude Include="commands\ProcessingBehavior.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

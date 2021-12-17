@@ -23,6 +23,7 @@
     <ClInclude Include="commands\Command.h" />
     <ClInclude Include="commands\ConsoleProcessingBehavior.h" />
     <ClInclude Include="commands\FormulationCommand.h" />
+    <ClInclude Include="commands\ProcessingBehavior.h" />
     <ClInclude Include="commands\PromotionCommand.h" />
     <ClInclude Include="Data-Structures\DoublyLinkedList.h" />
     <ClInclude Include="Data-Structures\doublyNode.h" />
@@ -45,7 +46,6 @@
     <ClInclude Include="IO\SilentConsoleBehaviour.h" />
     <ClInclude Include="IO\StepConsoleBehaviour.h" />
     <ClInclude Include="IO\TestGenerator.h" />
-    <ClInclude Include="ProcessingBehavior.h" />
     <ClInclude Include="Tests\HeapNodeTest.h" />
     <ClInclude Include="Tests\MaxHeapTest.h" />
     <ClInclude Include="Tests\VectorTest.h" />
