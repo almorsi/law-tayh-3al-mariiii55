@@ -23,9 +23,13 @@
     <ClInclude Include="commands\Command.h" />
     <ClInclude Include="commands\FormulationCommand.h" />
     <ClInclude Include="commands\PromotionCommand.h" />
+    <ClInclude Include="Data-Structures\DoublyLinkedList.h" />
+    <ClInclude Include="Data-Structures\doublyNode.h" />
     <ClInclude Include="Data-Structures\HeapNode.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />
+    <ClInclude Include="Data-Structures\Node.h" />
+    <ClInclude Include="Data-Structures\SortedLinkedList.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Defs.h" />
     <ClInclude Include="IO\FileInputDevice.h" />
@@ -44,9 +48,13 @@
     <ClCompile Include="commands\FormulationCommand.cpp" />
     <ClCompile Include="commands\PromotionCommand.cpp" />
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
+    <ClCompile Include="Data-Structures\DoublyLinkedList.cpp" />
+    <ClCompile Include="Data-Structures\doublyNode.cpp" />
     <ClCompile Include="Data-Structures\HeapNode.cpp" />
     <ClCompile Include="Data-Structures\Keyable.cpp" />
     <ClCompile Include="Data-Structures\MaxHeap.cpp" />
+    <ClCompile Include="Data-Structures\Node.cpp" />
+    <ClCompile Include="Data-Structures\SortedLinkedList.cpp" />
     <ClCompile Include="Data-Structures\Vector.cpp" />
     <ClCompile Include="IO\FileInputDevice.cpp" />
     <ClCompile Include="IO\OutputProcessingUnit.cpp" />
