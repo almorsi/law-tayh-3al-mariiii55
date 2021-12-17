@@ -11,7 +11,5 @@ void SilentConsoleBehaviour::print(Vector<int>*)
 	//TO BE DONE
 		
 	cout << "Simulation		ends, \n Output file created\n";
-
-
 }
 
