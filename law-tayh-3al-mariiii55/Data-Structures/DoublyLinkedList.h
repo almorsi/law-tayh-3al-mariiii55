@@ -11,11 +11,13 @@ class doublyLinkedList
 private:
 	doublyNode<T>* Head;
 	doublyNode<T>* Tail;
+	int size;
 public:
 	doublyLinkedList();
 
 	doublyNode<T>* getHead();
 	doublyNode<T>* getTail();
+	int getSize();
 	void insertEnd(T item);
 	void print();
 	void deleteAll();
