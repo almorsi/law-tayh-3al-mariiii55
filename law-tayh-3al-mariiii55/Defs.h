@@ -1,5 +1,6 @@
 #ifndef DEFS_H
 #define DEFS_H
+#include "Data-Structures/DataStructureDefinitions.cpp"
 
 struct Range
 {
@@ -32,19 +33,21 @@ struct MissionInputData
 	int significance;
 };
 
+
 enum RoverType
 {
-	NONE_RT,
-	EMERGENCY_MISSION_MT,
-	POLAR_MISSION_MT,
-	MOUNTAIN_MISSION_MT
+	R_NONE_RT,
+	R_EMERGENCY_MISSION_MT,
+	R_POLAR_MISSION_MT,
+	R_MOUNTAIN_MISSION_MT
 };
 
 
-struct RoverInputData
+struct Rover
 {
 	RoverType rovertype;
 	int checkUpDuration;
 	int speed;
 };
+
 #endif // !DEFS_H

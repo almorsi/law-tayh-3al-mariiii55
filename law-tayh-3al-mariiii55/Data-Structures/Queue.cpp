@@ -27,9 +27,7 @@ void  Queue<T>::enqueue(const T& x)
 template< class T>
 T& Queue<T>::dequeue()
 {
-		T& data;
-
-		data = vector.getFirst();
+		T& data = vector.getFirst();
 		vector.deleteBegin();
 		return data;
 }
