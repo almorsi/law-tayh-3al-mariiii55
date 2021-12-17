@@ -1,6 +1,6 @@
 #include "CancellationCommand.h"
 
-CancellationCommand::CancellationCommand(/*StationData* sd, MissionData mcd*/)
+CancellationCommand::CancellationCommand(/*StationData* sd, MissionInputData mcd*/)
 	//:
 	/*Command(sd, mcd)*/
 {

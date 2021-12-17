@@ -1,6 +1,6 @@
 #include "FormulationCommand.h"
 
-FormulationCommand::FormulationCommand(/*StationData* sd, MissionData mfd*/)
+FormulationCommand::FormulationCommand(/*StationData* sd, MissionInputData mfd*/)
 	//:
 	/*Command(sd, mfd)*/
 {

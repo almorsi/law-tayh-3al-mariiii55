@@ -1,8 +1,9 @@
 #include "OutputProcessingUnit.h"
 
-OutputProcessingUnit::OutputProcessingUnit()
+OutputProcessingUnit::OutputProcessingUnit(/*StationData* sd*/)
 	:
 	processedData(nullptr)
+	/*,stationData(sd)*/
 {
 }
 
@@ -33,7 +34,7 @@ Vector<int>* OutputProcessingUnit::getProcessedData()
 	* after mohammed implements those behaviors then we can add
 	* the behavior as its attribute by function setProcessingBehavior()
 	* then we just
-	* return processingBehavior->process(stationData*);
+	* return processingBehavior->process(stationData);
 	*/
 	return nullptr;
 }
