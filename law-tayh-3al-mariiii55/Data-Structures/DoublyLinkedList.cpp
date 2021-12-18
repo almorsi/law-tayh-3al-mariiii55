@@ -57,6 +57,7 @@ void doublyLinkedList<T>::insertEnd(T item)
 template<typename T>
 void doublyLinkedList<T>::print()
 {
+	/*
 	doublyNode<T>* h = Head;
 
 	while (h)
@@ -69,6 +70,7 @@ void doublyLinkedList<T>::print()
 			cout << "<--[" << h->getData() << "]";
 		h = h->getNext();
 	}
+	*/
 }
 
 template<typename T>

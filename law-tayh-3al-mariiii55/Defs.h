@@ -59,8 +59,8 @@ struct stationData
 {
 	int currentDay;
 	MaxHeap emergencyMissions;
-	doublyLinkedList<Mission> mountainMissions;
-	Queue<Mission> polarMissions;
+	doublyLinkedList<Mission*> mountainMissions;
+	Queue<Mission*> polarMissions;
 	MaxHeap emergencyRovers;
 	MaxHeap mountainRovers;
 	MaxHeap polarRovers;

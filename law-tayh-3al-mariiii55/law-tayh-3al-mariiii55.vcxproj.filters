@@ -76,6 +76,9 @@
     <ClCompile Include="commands\CancellationCommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IO\ConsoleProcessingBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
@@ -162,16 +165,16 @@
     <ClInclude Include="Tests\VectorTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="commands\ConsoleProcessingBehavior.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="commands\ProcessingBehavior.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Data-Structures\Mission.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Data-Structures\Rover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\ConsoleProcessingBehavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\ProcessingBehavior.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
