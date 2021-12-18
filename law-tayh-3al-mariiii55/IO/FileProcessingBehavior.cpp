@@ -5,54 +5,58 @@ fileProcessingBehavior::fileProcessingBehavior(StationData* data) :processingBeh
 
 Vector<int>* fileProcessingBehavior::process()
 {
-	int m = 0;
-	int p = 0;
-	int e = 0;
-	int Wait = 0;
-	int Exec = 0;
 	Vector<int>* fileData = new Vector<int>;
+	int numMountainMissions, numPolarMissions, numEmergMissions, numWaitingDays, numExecutionDays, numMountainRovers, numPolarRovers, numEmergRovers;
+	float avgWait, avgExec, autoPromote;
 
 	fileData->insertEnd(mainData->completedMissions.getSize());
+	numMountainMissions = numPolarMissions = numEmergMissions = numWaitingDays = numExecutionDays = numMountainRovers = numPolarRovers = numEmergRovers = 0;
 
-	Node<Mission*>* h = mainData->completedMissions.getHead();
-	while (h)
+	Node<Mission*>* temp = mainData->completedMissions.getHead();
+	while (temp)
 	{
-		fileData->insertEnd(h->getData()->compeletionDay);
-		fileData->insertEnd(h->getData()->mid.missionId);
-		fileData->insertEnd(h->getData()->formlationDay);
-		fileData->insertEnd(h->getData()->waitingDays);
-		fileData->insertEnd(h->getData()->mid.missionDuration);
+		fileData->insertEnd(temp->getData()->compeletionDay);
+		fileData->insertEnd(temp->getData()->mid.missionId);
+		fileData->insertEnd(temp->getData()->formlationDay);
+		fileData->insertEnd(temp->getData()->waitingDays);
+		fileData->insertEnd(temp->getData()->mid.missionDuration);
 
-		Wait += h->getData()->waitingDays;
-		Exec += h->getData()->mid.missionDuration;
+		numWaitingDays += temp->getData()->waitingDays;
+		numExecutionDays += temp->getData()->mid.missionDuration;
 
-		if (h->getData()->mid.missionType == EMERGENCY_MISSION_MT)
-			e++;
-		else if (h->getData()->mid.missionType == POLAR_MISSION_MT)
-			p++;
+		if (temp->getData()->mid.missionType == EMERGENCY_MISSION_MT)
+			numEmergMissions++;
+		else if (temp->getData()->mid.missionType == POLAR_MISSION_MT)
+			numPolarMissions++;
 		else
-			m++;
-		h = h->getNext();
+			numMountainMissions++;
+
+		temp = temp->getNext();
 	}
 
-	fileData->insertEnd(m);
-	fileData->insertEnd(p);
-	fileData->insertEnd(e);
+	fileData->insertEnd(numEmergMissions + numPolarMissions + numEmergMissions);
+	fileData->insertEnd(numMountainMissions);
+	fileData->insertEnd(numPolarMissions);
+	fileData->insertEnd(numEmergMissions);
 
-	fileData->insertEnd(mainData->emergencyRovers.getSize() + mainData->emergencyRovers.getSize() + mainData->mountainRovers.getSize() + mainData->polarRovers.getSize() + mainData->inCheckUp_ERovers.getSize() + mainData->inCheckUp_MRovers.getSize() + mainData->inCheckUp_PRovers.getSize());
-	fileData->insertEnd(mainData->mountainRovers.getSize() + mainData->inCheckUp_MRovers.getSize());
-	fileData->insertEnd(mainData->polarRovers.getSize() + mainData->inCheckUp_PRovers.getSize());
-	fileData->insertEnd(mainData->emergencyRovers.getSize() + mainData->inCheckUp_ERovers.getSize());
+	numMountainRovers = mainData->mountainRovers.getSize() + mainData->inCheckUp_MRovers.getSize();
+	numPolarRovers = mainData->polarRovers.getSize() + mainData->inCheckUp_PRovers.getSize();
+	numEmergRovers = mainData->emergencyRovers.getSize() + mainData->inCheckUp_ERovers.getSize();
 
-	float avgWait = float(Wait) / mainData->completedMissions.getSize();
-	float avgExec = float(Exec) / mainData->completedMissions.getSize();
+	fileData->insertEnd(numMountainRovers + numPolarRovers + numEmergRovers);
+
+	fileData->insertEnd(numMountainRovers);
+	fileData->insertEnd(numPolarRovers);
+	fileData->insertEnd(numEmergRovers);
+
+	avgWait = float(numWaitingDays) / mainData->completedMissions.getSize();
+	avgExec = float(numExecutionDays) / mainData->completedMissions.getSize();
 	fileData->insertEnd(int(avgWait));
 	fileData->insertEnd((avgWait - int(avgWait)) * 100);
 	fileData->insertEnd(int(avgExec));
 	fileData->insertEnd((avgExec - int(avgExec)) * 100);
 
-	float autoPromote = (mainData->mountainMissions.getSize() / 1) * 100;//instead of 1 waitning for atuomatically prommated missions 
-
+	autoPromote = (mainData->mountainMissions.getSize() / 1) * 100;//instead of 1 waitning for atuomatically prommated missions 
 
 	return fileData;
 }
