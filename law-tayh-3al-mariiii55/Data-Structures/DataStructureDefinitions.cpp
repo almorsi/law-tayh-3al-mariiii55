@@ -13,6 +13,8 @@
 template class Vector<int>;
 template class Vector<Keyable*>;
 template class MaxHeap<Keyable*>;
+template class MaxHeap<Rover*>;
+template class MaxHeap<Mission*>;
 template class Queue<int>;
 template class Queue<Mission*>;;
 template class Vector<int>;

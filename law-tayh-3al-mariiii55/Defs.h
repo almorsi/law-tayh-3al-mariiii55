@@ -58,13 +58,14 @@ struct inExecute
 struct stationData
 {
 	int currentDay;
-	MaxHeap emergencyMissions;
+	MaxHeap<Mission*> emergencyMissions;
 	doublyLinkedList<Mission*> mountainMissions;
 	Queue<Mission*> polarMissions;
-	MaxHeap emergencyRovers;
-	MaxHeap mountainRovers;
-	MaxHeap polarRovers;
-	MaxHeap InexecutionsPairs; //use negative values to revrse the use of maxHeap
+	MaxHeap<Rover*> emergencyRovers;
+	MaxHeap<Rover*> mountainRovers;
+	MaxHeap<Rover*> polarRovers;
+	MaxHeap<Rover*> inexecutionsPairs; //use negative values to revrse the use of maxHeap
+	MaxHeap<Rover*> inCheckUpRovers;
 	SortedLinkedList completedMissions;
 };
 

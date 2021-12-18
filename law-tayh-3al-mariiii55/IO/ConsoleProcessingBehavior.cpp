@@ -31,7 +31,7 @@ Vector<int>* consoleProcessingBehavior::process()
 	}
 	
 	consolData->insertEnd(0); //IN-Exe waiting for clarification 
-	for (int i = 0; i < mainData->InexecutionsPairs.getSize(); i++)
+	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
 	{
 		//waiting for clarification
 	}
