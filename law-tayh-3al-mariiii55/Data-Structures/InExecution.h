@@ -4,6 +4,7 @@
 
 class InExecution :public Keyable
 {
+public:
 	//key in keyable class is days to finish
 	Mission* mission;
 	Rover* rover;

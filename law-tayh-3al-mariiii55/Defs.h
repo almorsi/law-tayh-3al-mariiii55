@@ -63,9 +63,11 @@ struct StationData
 	MaxHeap<Rover*> mountainRovers;
 	MaxHeap<Rover*> polarRovers;
 
-	MaxHeap<InExecution*> inexecutionsPairs; //use negative values to revrse the use of maxHeap
+	MaxHeap<InExecution*> inexecutionsPairs;
 
-	MaxHeap<Rover*> inCheckUpRovers;
+	MaxHeap<Rover*> inCheckUp_ERovers;
+	MaxHeap<Rover*> inCheckUp_MRovers;
+	MaxHeap<Rover*> inCheckUp_PRovers;
 	SortedLinkedList completedMissions;
 
 	Queue<Command*> commands;

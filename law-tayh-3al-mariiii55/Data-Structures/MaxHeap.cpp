@@ -63,6 +63,12 @@ T MaxHeap<T>::extractMax()
     return oldMax;
 }
 
+template<typename T>
+T MaxHeap<T>::getAt(long i)
+{
+    return heap.getAt(i);
+}
+
 template <typename T>
 long MaxHeap<T>::getParentIndexOfChildAt(long i)
 {

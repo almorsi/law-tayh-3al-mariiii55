@@ -4,7 +4,7 @@
 #include "..\Defs.h"
 #include "..\Data-Structures\Mission.h"
 #include "..\Data-Structures\Rover.h"
-
+#include "..\Data-Structures\InExecution.h"
 class processingBehaviour
 {
 protected:
