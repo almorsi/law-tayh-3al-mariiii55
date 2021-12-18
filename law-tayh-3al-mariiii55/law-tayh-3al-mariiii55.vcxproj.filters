@@ -168,6 +168,12 @@
     <ClInclude Include="commands\ProcessingBehavior.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Data-Structures\Mission.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data-Structures\Rover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

@@ -1,7 +1,12 @@
 #ifndef DEFS_H
 #define DEFS_H
-#include "Data-Structures/DataStructureDefinitions.cpp"
-
+#include "..\law-tayh-3al-mariiii55\Data-Structures\SortedLinkedList.h"
+#include "..\law-tayh-3al-mariiii55\Data-Structures\HeapNode.h"
+#include "..\law-tayh-3al-mariiii55\Data-Structures\MaxHeap.h"
+#include "..\law-tayh-3al-mariiii55\Data-Structures\DoublyLinkedList.h"
+#include "..\law-tayh-3al-mariiii55\Data-Structures\Queue.h"
+#include "..\law-tayh-3al-mariiii55\Data-Structures\Vector.h"
+#include "..\law-tayh-3al-mariiii55\Data-Structures\Keyable.h"
 struct Range
 {
 	int min, max;
@@ -33,39 +38,16 @@ struct MissionInputData
 	int significance;
 };
 
-struct Mission
-{
-	int ID;
-	int compeletionDay;
-	int formlationDay;
-	int assignDay;
-	int waitingDays;
-	int inExecutionDays;
-	MissionType type;
-	int targetLocation;
-	int missionDuration;
-	int significance;
-	int daysToBePromoted;
-
-};
 enum RoverType
 {
-	R_NONE_RT,
-	R_EMERGENCY_MISSION_MT,
-	R_POLAR_MISSION_MT,
-	R_MOUNTAIN_MISSION_MT
+	NONE_RT,
+	EMERGENCY_ROVER_RT,
+	POLAR_ROVER_RT,
+	MOUNTAIN_ROVER_RT
 };
 
-
-struct Rover
-{
-	RoverType rovertype;
-	int checkUpDuration;
-	int speed;
-	int missionsToCheckUp;
-};
-
-
+class Mission;
+class Rover;
 struct inExecute
 {
 	int daysToFinish;
