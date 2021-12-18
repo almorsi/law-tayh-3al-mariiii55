@@ -2,11 +2,13 @@
 
 #include "MaxHeap.h"
 
-MaxHeap::MaxHeap()
+template <typename T>
+MaxHeap<T>::MaxHeap()
 {
 }
 
-MaxHeap::MaxHeap(const Vector<Keyable*>& vk)
+template <typename T>
+MaxHeap<T>::MaxHeap(const Vector<T>& vk)
 {
     for (long i = 0; i < vk.getLength(); i++)
         heap.insertEnd(vk.getAt(i));
@@ -15,21 +17,25 @@ MaxHeap::MaxHeap(const Vector<Keyable*>& vk)
         siftDown(i);
 }
 
-MaxHeap::~MaxHeap()
+template <typename T>
+MaxHeap<T>::~MaxHeap()
 {
 }
 
-long MaxHeap::getSize() const
+template <typename T>
+long MaxHeap<T>::getSize() const
 {
     return heap.getLength();
 }
 
-bool MaxHeap::isEmpty() const
+template <typename T>
+bool MaxHeap<T>::isEmpty() const
 {
     return heap.isEmpty();
 }
 
-void MaxHeap::insert(Keyable* it)
+template <typename T>
+void MaxHeap<T>::insert(T it)
 {
     if (!it) return;
 
@@ -37,15 +43,16 @@ void MaxHeap::insert(Keyable* it)
     siftUp(getSize() - 1);
 }
 
-
-Keyable* MaxHeap::getMax() const
+template <typename T>
+T MaxHeap<T>::getMax() const
 {
     return heap.getFirst();
 }
 
-Keyable* MaxHeap::extractMax()
+template <typename T>
+T MaxHeap<T>::extractMax()
 {
-    Keyable* oldMax;
+    T oldMax;
 
     oldMax = getMax();
     std::swap(heap.getFirst(), heap.getLast());
@@ -55,7 +62,8 @@ Keyable* MaxHeap::extractMax()
     return oldMax;
 }
 
-long MaxHeap::getParentIndexOfChildAt(long i)
+template <typename T>
+long MaxHeap<T>::getParentIndexOfChildAt(long i)
 {
     if (i == 0) 
         return -1;
@@ -63,7 +71,8 @@ long MaxHeap::getParentIndexOfChildAt(long i)
     return (i - 1)/2;
 }
 
-long MaxHeap::getLeftChildIndexOfParentAt(long i)
+template <typename T>
+long MaxHeap<T>::getLeftChildIndexOfParentAt(long i)
 {
     long childIndex;
 
@@ -74,7 +83,8 @@ long MaxHeap::getLeftChildIndexOfParentAt(long i)
     return childIndex;
 }
 
-long MaxHeap::getRightChildIndexOfParentAt(long i)
+template <typename T>
+long MaxHeap<T>::getRightChildIndexOfParentAt(long i)
 {
     long childIndex;
 
@@ -85,7 +95,8 @@ long MaxHeap::getRightChildIndexOfParentAt(long i)
     return  childIndex;
 }
 
-void MaxHeap::siftUp(long i)
+template <typename T>
+void MaxHeap<T>::siftUp(long i)
 {
     long childIndex, parentIndex;
 
@@ -103,7 +114,8 @@ void MaxHeap::siftUp(long i)
     return;
 }
 
-void MaxHeap::siftDown(long i)
+template <typename T>
+void MaxHeap<T>::siftDown(long i)
 {
     long leftChildIndex, rightChildIndex, maxOfChildsIndex, parentIndex;
     

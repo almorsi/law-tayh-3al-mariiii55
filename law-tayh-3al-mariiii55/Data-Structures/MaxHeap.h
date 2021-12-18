@@ -2,21 +2,21 @@
 #define MAXHEAP_H
 
 #include "vector.h"
-#include "Keyable.h"
 
+template <typename T>
 class MaxHeap
 {
 public:
 	MaxHeap();
-	MaxHeap(const Vector<Keyable*>&);
+	MaxHeap(const Vector<T>&);
 	~MaxHeap();
 
 	long getSize() const;
 	bool isEmpty() const;
 
-	void insert(Keyable*);
-	Keyable* getMax()const;
-	Keyable* extractMax();
+	void insert(T);
+	T getMax()const;
+	T extractMax();
 	
 private:
 	long getParentIndexOfChildAt(long);
@@ -26,6 +26,6 @@ private:
 	void siftDown(long);
 
 private:
-	Vector<Keyable*> heap;
+	Vector<T> heap;
 };
 #endif // !MAXHEAP_H
