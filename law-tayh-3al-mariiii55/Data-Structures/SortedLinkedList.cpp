@@ -1,36 +1,41 @@
 #include "SortedLinkedList.h"
 #include <iostream>
 using namespace std;
-
-SortedLinkedList::SortedLinkedList()
+template<typename T>
+SortedLinkedList<T>::SortedLinkedList()
 {
 	Head = nullptr;
 }
 
-SortedLinkedList::~SortedLinkedList()
+template<typename T>
+SortedLinkedList<T>::~SortedLinkedList()
 {
 	deleteAll();
 }
 
-Node* SortedLinkedList::getHead()
+template<typename T>
+Node<T>* SortedLinkedList<T>::getHead()
 {
 	return Head;
 }
 
-int SortedLinkedList::getSize()
+template<typename T>
+int SortedLinkedList<T>::getSize()
 {
 	return size;
 }
 
-void SortedLinkedList::setHead(Node* h)
+template<typename T>
+void SortedLinkedList<T>::setHead(Node<T>* h)
 {
 	Head = h;
 }
 
-bool SortedLinkedList::insert(Keyable* item)
+template<typename T>
+bool SortedLinkedList<T>::insert(T item)
 {
 	size++;
-	Node* X = new Node(item);
+	Node<T>* X = new Node<T>(item);
 	if (Head == nullptr)
 	{
 		X->setNext(Head);
@@ -59,8 +64,8 @@ bool SortedLinkedList::insert(Keyable* item)
 			Head = X;
 			return true;
 		}
-		Node* current = Head->getNext();
-		Node* prev = Head;
+		Node<T>* current = Head->getNext();
+		Node<T>* prev = Head;
 		while (current)
 		{
 			if (item->getKey() <= current->getData()->getKey())
@@ -77,9 +82,10 @@ bool SortedLinkedList::insert(Keyable* item)
 	}
 }
 
-void SortedLinkedList::print()
+template<typename T>
+void SortedLinkedList<T>::print()
 {
-	Node* h = Head;
+	Node<T>* h = Head;
 
 	while (h)
 	{
@@ -92,9 +98,10 @@ void SortedLinkedList::print()
 	}
 }
 
-void SortedLinkedList::deleteAll()
+template<typename T>
+void SortedLinkedList<T>::deleteAll()
 {
-	Node* P = Head;
+	Node<T>* P = Head;
 	while (Head)
 	{
 		P = Head->getNext();

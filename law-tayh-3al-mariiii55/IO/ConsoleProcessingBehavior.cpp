@@ -145,7 +145,7 @@ Vector<int>* consoleProcessingBehavior::process()
 		consolData->insertEnd(0);
 	else
 	{
-	Node* a = mainData->completedMissions.getHead();
+	Node<Mission*>* a = mainData->completedMissions.getHead();
 	while (a)
 	{
 		consolData->insertEnd(a->getData()->getKey());

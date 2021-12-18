@@ -1,31 +1,37 @@
 #include "Node.h"
-Node::Node()
+template<typename T>
+Node<T>::Node()
 {
 	next = nullptr;
 }
 
-Node::Node(Keyable* item)
+template<typename T>
+Node<T>::Node(T item)
 {
 	data = item;
 	next = nullptr;
 }
 
-Keyable* Node::getData()
+template<typename T>
+T Node<T>::getData()
 {
 	return data;
 }
 
-Node* Node::getNext()
+template<typename T>
+Node<T>* Node<T>::getNext()
 {
 	return next;
 }
 
-void Node::setData(Keyable* item)
+template<typename T>
+void Node<T>::setData(T item)
 {
 	data = item;
 }
 
-void Node::setNext(Node* nextNode)
+template<typename T>
+void Node<T>::setNext(Node<T>* nextNode)
 {
 	next = nextNode;
 }

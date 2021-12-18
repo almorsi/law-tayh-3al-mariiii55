@@ -68,7 +68,7 @@ struct StationData
 	MaxHeap<Rover*> inCheckUp_ERovers;
 	MaxHeap<Rover*> inCheckUp_MRovers;
 	MaxHeap<Rover*> inCheckUp_PRovers;
-	SortedLinkedList completedMissions;
+	SortedLinkedList<Mission*> completedMissions;
 
 	Queue<Command*> commands;
 };
