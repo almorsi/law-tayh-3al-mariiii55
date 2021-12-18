@@ -36,6 +36,7 @@ struct MissionInputData
 	int missionId;
 	int targetLocation;
 	int missionDuration;
+	int daysToBePromoted;
 	int significance;
 };
 
