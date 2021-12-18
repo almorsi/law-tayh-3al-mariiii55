@@ -9,6 +9,8 @@ public:
 	int checkUpDuration;
 	int speed;
 	int missionsToCheckUp;
+	Rover():rovertype(NONE_RT),checkUpDuration(0),speed(0),missionsToCheckUp(0)
+	{}
 };
 
 #endif 

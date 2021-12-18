@@ -26,6 +26,7 @@
     <ClInclude Include="Data-Structures\DoublyLinkedList.h" />
     <ClInclude Include="Data-Structures\doublyNode.h" />
     <ClInclude Include="Data-Structures\HeapNode.h" />
+    <ClInclude Include="Data-Structures\InExecution.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />
     <ClInclude Include="Data-Structures\Mission.h" />

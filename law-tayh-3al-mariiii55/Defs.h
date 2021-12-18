@@ -7,6 +7,7 @@
 #include "..\law-tayh-3al-mariiii55\Data-Structures\Queue.h"
 #include "..\law-tayh-3al-mariiii55\Data-Structures\Vector.h"
 #include "..\law-tayh-3al-mariiii55\Data-Structures\Keyable.h"
+//#include "commands/Command.h"
 struct Range
 {
 	int min, max;
@@ -48,13 +49,8 @@ enum RoverType
 
 class Mission;
 class Rover;
-struct inExecute
-{
-	int daysToFinish;
-	Mission* mission;
-	Rover* rover;
-};
-
+class InExecution;
+class Command;
 struct StationData
 {
 	int currentDay;
@@ -67,10 +63,12 @@ struct StationData
 	MaxHeap<Rover*> mountainRovers;
 	MaxHeap<Rover*> polarRovers;
 
-	//MaxHeap<Rover*> inexecutionsPairs; //use negative values to revrse the use of maxHeap
+	MaxHeap<InExecution*> inexecutionsPairs; //use negative values to revrse the use of maxHeap
 
 	MaxHeap<Rover*> inCheckUpRovers;
 	SortedLinkedList completedMissions;
+
+	Queue<Command*> commands;
 };
 
 
