@@ -17,7 +17,7 @@ public:
 	void insert(T);
 	T getMax()const;
 	T extractMax();
-	
+	T getAt(long);
 private:
 	long getParentIndexOfChildAt(long);
 	long getLeftChildIndexOfParentAt(long);
