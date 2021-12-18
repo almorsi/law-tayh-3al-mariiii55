@@ -6,16 +6,12 @@ class Mission :public Keyable
 {
 public:
 	Mission(){}
-	MissionType type;
-	int ID;
+	MissionInputData mid{NONE_MT, 0, 0, 0, 0, 0};
 	int compeletionDay;
 	int formlationDay;
 	int assignDay;
 	int waitingDays;
 	int inExecutionDays;
-	int targetLocation;
-	int missionDuration;
-	int significance;
 	int daysToBePromoted;
 };
 

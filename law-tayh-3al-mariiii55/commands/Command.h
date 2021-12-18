@@ -2,15 +2,14 @@
 #define COMMAND_H
 
 #include "..\Defs.h"
-//class StationData; should be included here
 
 class Command
 {
 public:
-	Command(/*StationData* sd, MissionInputData md*/)
-		//:
-		//sd(sd),
-		//md(md)
+	Command(StationData* sd, MissionInputData md)
+		:
+		sd(sd),
+		md(md)
 	{
 	}
 
@@ -18,8 +17,8 @@ public:
 
 	virtual void execute() = 0;
 protected:
-	//StationData* sd;
-	//MissionInputData md;
+	StationData* sd;
+	MissionInputData md;
 };
 
 #endif

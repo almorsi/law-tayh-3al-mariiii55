@@ -5,7 +5,7 @@
 class PromotionCommand : public Command
 {
 public:
-	PromotionCommand(/*StationData*, MissionInputData*/);
+	PromotionCommand(StationData*, MissionInputData);
 	virtual ~PromotionCommand();
 
 	virtual void execute();

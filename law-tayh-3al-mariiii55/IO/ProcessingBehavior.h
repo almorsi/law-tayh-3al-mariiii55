@@ -8,9 +8,9 @@
 class processingBehaviour
 {
 protected:
-	stationData* mainData;
+	StationData* mainData;
 public:
-	processingBehaviour(stationData* data) { mainData = data; }
+	processingBehaviour(StationData* data) { mainData = data; }
 	virtual Vector<int>* process() = 0;
 	virtual ~processingBehaviour() {}
 };

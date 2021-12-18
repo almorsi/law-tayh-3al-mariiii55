@@ -5,7 +5,7 @@
 class consoleProcessingBehavior :public processingBehaviour
 {
 public:
-	consoleProcessingBehavior(stationData* data);
+	consoleProcessingBehavior(StationData* data);
 	Vector<int>* process();
 };
 #endif 

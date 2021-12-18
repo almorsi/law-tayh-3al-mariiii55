@@ -5,7 +5,7 @@
 class FormulationCommand : public Command
 {
 public:
-	FormulationCommand(/*StationData*, MissionInputData*/);
+	FormulationCommand(StationData*, MissionInputData);
 	virtual ~FormulationCommand();
 
 	virtual void execute();

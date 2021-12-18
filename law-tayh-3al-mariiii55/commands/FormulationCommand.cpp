@@ -1,8 +1,8 @@
 #include "FormulationCommand.h"
 
-FormulationCommand::FormulationCommand(/*StationData* sd, MissionInputData mfd*/)
-	//:
-	/*Command(sd, mfd)*/
+FormulationCommand::FormulationCommand(StationData* sd, MissionInputData mfd)
+	:
+	Command(sd, mfd)
 {
 }
 
@@ -12,8 +12,8 @@ FormulationCommand::~FormulationCommand()
 
 void FormulationCommand::execute()
 {
-	/*shoud formulate and add a mission to its apropriate data structure in StationData*/
-	/**
+	/*should formulate and add a mission to its apropriate data structure in StationData*/
+
 	switch (md.missionType)
 	{
 	case EMERGENCY_MISSION_MT:
@@ -25,5 +25,5 @@ void FormulationCommand::execute()
 	default:
 		break;
 	}
-	*/
+	
 }

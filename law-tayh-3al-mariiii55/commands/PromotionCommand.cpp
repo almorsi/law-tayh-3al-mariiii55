@@ -1,8 +1,8 @@
 #include "PromotionCommand.h"
 
-PromotionCommand::PromotionCommand(/*StationData* sd, MissionInputData mpd*/)
-//:
-/*Command(sd, mpd)*/
+PromotionCommand::PromotionCommand(StationData* sd, MissionInputData mpd)
+:
+Command(sd, mpd)
 {
 }
 
