@@ -129,7 +129,7 @@ void Vector<T>::resize(double factor)
 	setBegin(newBegin);
 	setEnd(i);
 	setCapacity(newCapacity);
-	delete array;
+	delete [] array;
 	array = newArray;
 }
 
@@ -205,10 +205,4 @@ template<typename T>
 bool Vector<T>::isInValidRealAddress(long realAddress) const
 {
 	return realAddress <= getBegin() || realAddress >= getEnd();
-}
-
-template<typename T>
-bool Vector<T>::isHasToResizeOnInsertion()
-{
-	return (end >= capacity) || (begin < 0);
 }

@@ -34,28 +34,24 @@ Vector<int>* FileInputDevice::getParsedInput()
 
 void FileInputDevice::parseInput()
 {
-	char c = '0';
+	int sum;
+	char c;
 
 	parsedData = new Vector<int>();
 	
-	int sum = 0;
-	bool numFlag = false;
-	while (c != EOF)
+	do
 	{
+		sum = 0;
 		c = fs.get();
-		while (isdigit(c))
+
+		if (isdigit(c))
 		{
-			sum = sum * 10 + (c - '0');
-			numFlag = true;
-			c = fs.get();
-		}
-		if (numFlag)
-		{
+			do{sum = sum * 10 + (c - '0');} 
+			while ((c = fs.get()) != EOF && isdigit(c));
 			parsedData->insertEnd(sum);
-			numFlag = false;
-			sum = 0;
 		}
 		if (isalpha(c))
 			parsedData->insertEnd(c);
-	}
+
+	} while (c != EOF);
 }

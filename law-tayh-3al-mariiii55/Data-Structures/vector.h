@@ -65,6 +65,5 @@ private:
 	long getRealAddress(long) const;
 	bool isInValidRealAddress(long) const;
 
-	bool isHasToResizeOnInsertion();
 };
 #endif
