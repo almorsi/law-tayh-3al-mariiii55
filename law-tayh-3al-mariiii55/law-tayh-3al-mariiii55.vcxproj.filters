@@ -85,7 +85,9 @@
     <ClCompile Include="IO\InputProcessingUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tests\InputProcessingUnitTest.cpp" />
+    <ClCompile Include="Tests\InputProcessingUnitTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
