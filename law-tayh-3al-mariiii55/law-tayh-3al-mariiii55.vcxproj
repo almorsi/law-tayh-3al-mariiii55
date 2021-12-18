@@ -41,6 +41,7 @@
     <ClInclude Include="IO\FileInputDevice.h" />
     <ClInclude Include="IO\FileProcessingBehavior.h" />
     <ClInclude Include="IO\InputDevice.h" />
+    <ClInclude Include="IO\InputProcessingUnit.h" />
     <ClInclude Include="IO\InteractiveConsoleBehaviour.h" />
     <ClInclude Include="IO\Observable.h" />
     <ClInclude Include="IO\Observer.h" />
@@ -51,6 +52,7 @@
     <ClInclude Include="IO\StepConsoleBehaviour.h" />
     <ClInclude Include="IO\TestGenerator.h" />
     <ClInclude Include="Tests\HeapNodeTest.h" />
+    <ClInclude Include="Tests\InputProcessingUnitTest.h" />
     <ClInclude Include="Tests\MaxHeapTest.h" />
     <ClInclude Include="Tests\VectorTest.h" />
   </ItemGroup>
@@ -73,6 +75,7 @@
     <ClCompile Include="IO\ConsoleProcessingBehavior.cpp" />
     <ClCompile Include="IO\FileInputDevice.cpp" />
     <ClCompile Include="IO\FileProcessingBehavior.cpp" />
+    <ClCompile Include="IO\InputProcessingUnit.cpp" />
     <ClCompile Include="IO\InteractiveConsoleBehaviour.cpp" />
     <ClCompile Include="IO\OutputProcessingUnit.cpp" />
     <ClCompile Include="IO\SilentConsoleBehaviour.cpp" />
@@ -80,6 +83,7 @@
     <ClCompile Include="IO\TestGenerator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tests\HeapNodeTest.cpp" />
+    <ClCompile Include="Tests\InputProcessingUnitTest.cpp" />
     <ClCompile Include="Tests\MaxHeapTest.cpp" />
     <ClCompile Include="Tests\VectorTest.cpp" />
   </ItemGroup>
