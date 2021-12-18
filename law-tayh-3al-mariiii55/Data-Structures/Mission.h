@@ -5,6 +5,7 @@
 class Mission :public Keyable
 {
 public:
+	Mission(){}
 	MissionType type;
 	int ID;
 	int compeletionDay;

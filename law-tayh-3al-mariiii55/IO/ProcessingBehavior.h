@@ -2,6 +2,8 @@
 #define PROCESSING_BEHAVIOR
 
 #include "..\Defs.h"
+#include "..\Data-Structures\Mission.h"
+#include "..\Data-Structures\Rover.h"
 
 class processingBehaviour
 {

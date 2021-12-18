@@ -21,9 +21,7 @@
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h" />
     <ClInclude Include="commands\Command.h" />
-    <ClInclude Include="commands\ConsoleProcessingBehavior.h" />
     <ClInclude Include="commands\FormulationCommand.h" />
-    <ClInclude Include="commands\ProcessingBehavior.h" />
     <ClInclude Include="commands\PromotionCommand.h" />
     <ClInclude Include="Data-Structures\DoublyLinkedList.h" />
     <ClInclude Include="Data-Structures\doublyNode.h" />
@@ -38,6 +36,7 @@
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Defs.h" />
     <ClInclude Include="IO\ConsoleBehaviour.h" />
+    <ClInclude Include="IO\ConsoleProcessingBehavior.h" />
     <ClInclude Include="IO\FileInputDevice.h" />
     <ClInclude Include="IO\InputDevice.h" />
     <ClInclude Include="IO\InteractiveConsoleBehaviour.h" />
@@ -45,6 +44,7 @@
     <ClInclude Include="IO\Observer.h" />
     <ClInclude Include="IO\OutputDeviceh.h" />
     <ClInclude Include="IO\OutputProcessingUnit.h" />
+    <ClInclude Include="IO\ProcessingBehavior.h" />
     <ClInclude Include="IO\SilentConsoleBehaviour.h" />
     <ClInclude Include="IO\StepConsoleBehaviour.h" />
     <ClInclude Include="IO\TestGenerator.h" />
@@ -68,6 +68,7 @@
     <ClCompile Include="Data-Structures\Vector.cpp" />
     <ClCompile Include="IO\ConsoleOutputDevice.cpp" />
     <ClCompile Include="IO\ConsoleOutputDevice.h" />
+    <ClCompile Include="IO\ConsoleProcessingBehavior.cpp" />
     <ClCompile Include="IO\FileInputDevice.cpp" />
     <ClCompile Include="IO\InteractiveConsoleBehaviour.cpp" />
     <ClCompile Include="IO\OutputProcessingUnit.cpp" />
