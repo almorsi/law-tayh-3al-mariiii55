@@ -1,5 +1,6 @@
 #include <cassert>
 #include "MaxHeapTest.h"
+#include "..\Data-Structures\Keyable.h"
 
 MaxHeapTest::MaxHeapTest()
 {
@@ -24,18 +25,18 @@ void MaxHeapTest::runAllTests()
 
 void MaxHeapTest::maxHeapCreation()
 {
-	MaxHeap mh;
+	MaxHeap<Keyable*> mh;
 }
 
 void MaxHeapTest::maxHeapInitialyIsEmpty()
 {
-	MaxHeap mh;
+	MaxHeap<Keyable*> mh;
 	assert(mh.isEmpty());
 }
 
 void MaxHeapTest::sizeAfterInserting5NullElementsShouldBe0()
 {
-	MaxHeap mh;
+	MaxHeap<Keyable*> mh;
 	for (int i = 0; i < 5; i++)
 		mh.insert(nullptr);
 	assert(mh.isEmpty());
@@ -44,7 +45,7 @@ void MaxHeapTest::sizeAfterInserting5NullElementsShouldBe0()
 
 void MaxHeapTest::insertMaxElementLastTheRequestTheMax()
 {
-	MaxHeap mh;
+	MaxHeap<Keyable*> mh;
 
 	Keyable* ks = new Keyable[5];
 	for (int i = 0; i < 5; i++)
@@ -64,7 +65,7 @@ void MaxHeapTest::buildAMaxHeapFromAnUnsortedVector()
 		vk.insertEnd(new Keyable());
 		vk.getAt(i)->setKey(i);
 	}
-	MaxHeap mh(vk);
+	MaxHeap<Keyable*> mh(vk);
 	assert(mh.getMax()->getKey() == 11);
 	for (int i = 0; i < 12; i++)
 		delete vk.getAt(i);
@@ -79,7 +80,7 @@ void MaxHeapTest::testNextMaxAfterExtractOldMax()
 		vk.getAt(i)->setKey(i);
 	}
 
-	MaxHeap mh(vk);
+	MaxHeap<Keyable*> mh(vk);
 	for (int i = 999; i>=0; i--)
 	{
 		assert(mh.getSize() == i+1);
@@ -91,7 +92,7 @@ void MaxHeapTest::testNextMaxAfterExtractOldMax()
 
 void MaxHeapTest::shouldThrowExeceptionWhenExtractingFromEmptyHeap()
 {
-	MaxHeap mh;
+	MaxHeap<Keyable*> mh;
 	try
 	{
 		mh.extractMax();
@@ -106,7 +107,7 @@ void MaxHeapTest::shouldThrowExeceptionWhenExtractingFromEmptyHeap()
 
 void MaxHeapTest::shouldTrhowExeceptionWhenGettingMaxOfAnEmptyHeap()
 {
-	MaxHeap mh;
+	MaxHeap<Keyable*> mh;
 	try
 	{
 		mh.getMax();
@@ -122,6 +123,6 @@ void MaxHeapTest::shouldTrhowExeceptionWhenGettingMaxOfAnEmptyHeap()
 void MaxHeapTest::shouldBeEmptyAfterBuildingWithEmptyVector()
 {
 	Vector<Keyable*> vk;
-	MaxHeap mh(vk);
+	MaxHeap<Keyable*> mh(vk);
 	assert(mh.isEmpty());
 }
