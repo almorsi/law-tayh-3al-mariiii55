@@ -31,10 +31,12 @@ Vector<int>* consoleProcessingBehavior::process()
 	}
 	
 	consolData->insertEnd(0); //IN-Exe waiting for clarification 
+	/*
 	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
 	{
 		//waiting for clarification
 	}
+	*/
 	consolData->insertEnd(mainData->emergencyRovers.getSize() + mainData->mountainRovers.getSize() + mainData->polarRovers.getSize());
 	
 	consolData->insertEnd(mainData->emergencyRovers.getSize());
