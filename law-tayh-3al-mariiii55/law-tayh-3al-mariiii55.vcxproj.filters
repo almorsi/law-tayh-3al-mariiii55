@@ -79,6 +79,9 @@
     <ClCompile Include="IO\ConsoleProcessingBehavior.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IO\FileProcessingBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
@@ -178,6 +181,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Data-Structures\InExecution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\FileProcessingBehavior.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

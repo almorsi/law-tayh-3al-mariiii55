@@ -1,20 +1,19 @@
 #ifndef _NODE
 #define _NODE
-#include "Keyable.h"
 
-
+template<typename T>
 class Node
 {
 private:
-	Keyable* data;
-	Node* next;
+	T data;
+	Node<T>* next;
 public:
 	Node();
-	Node(Keyable* item);
-	Keyable* getData();
-	Node* getNext();
-	void setData(Keyable* item);
-	void setNext(Node* nextNode);
+	Node(T item);
+	T getData();
+	Node<T>* getNext();
+	void setData(T item);
+	void setNext(Node<T>* nextNode);
 };
 
 #endif
