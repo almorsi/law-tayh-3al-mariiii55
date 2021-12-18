@@ -52,11 +52,12 @@ Vector<int>* fileProcessingBehavior::process()
 	avgWait = float(numWaitingDays) / mainData->completedMissions.getSize();
 	avgExec = float(numExecutionDays) / mainData->completedMissions.getSize();
 	fileData->insertEnd(int(avgWait));
-	fileData->insertEnd((avgWait - int(avgWait)) * 100);
+	fileData->insertEnd(int( ( avgWait - int(avgWait) ) * 100) );
 	fileData->insertEnd(int(avgExec));
-	fileData->insertEnd((avgExec - int(avgExec)) * 100);
+	fileData->insertEnd(int( ( avgExec - int(avgExec) ) * 100) );
 
-	autoPromote = (mainData->mountainMissions.getSize() / 1) * 100;//instead of 1 waitning for atuomatically prommated missions 
+	autoPromote = (mainData->mountainMissions.getSize() / float(1) ) * 100;//instead of 1 waitning for atuomatically prommated missions 
+	fileData->insertEnd(int(autoPromote));
 
 	return fileData;
 }

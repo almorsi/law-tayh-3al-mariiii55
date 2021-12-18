@@ -39,6 +39,7 @@
     <ClInclude Include="IO\ConsoleBehaviour.h" />
     <ClInclude Include="IO\ConsoleProcessingBehavior.h" />
     <ClInclude Include="IO\FileInputDevice.h" />
+    <ClInclude Include="IO\FileOutputDevice.h" />
     <ClInclude Include="IO\FileProcessingBehavior.h" />
     <ClInclude Include="IO\InputDevice.h" />
     <ClInclude Include="IO\InputProcessingUnit.h" />
@@ -74,6 +75,7 @@
     <ClCompile Include="IO\ConsoleOutputDevice.h" />
     <ClCompile Include="IO\ConsoleProcessingBehavior.cpp" />
     <ClCompile Include="IO\FileInputDevice.cpp" />
+    <ClCompile Include="IO\FileOutputDevice.cpp" />
     <ClCompile Include="IO\FileProcessingBehavior.cpp" />
     <ClCompile Include="IO\InputProcessingUnit.cpp" />
     <ClCompile Include="IO\InteractiveConsoleBehaviour.cpp" />
