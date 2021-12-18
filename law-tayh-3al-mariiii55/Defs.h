@@ -23,10 +23,10 @@ enum EventType
 
 enum MissionType
 {
-	NONE_MT,
-	EMERGENCY_MISSION_MT,
+	NONE_MT = 0,
+	MOUNTAIN_MISSION_MT,
 	POLAR_MISSION_MT,
-	MOUNTAIN_MISSION_MT
+	EMERGENCY_MISSION_MT
 };
 
 struct MissionInputData
@@ -36,15 +36,16 @@ struct MissionInputData
 	int missionId;
 	int targetLocation;
 	int missionDuration;
+	int daysToBePromoted;
 	int significance;
 };
 
 enum RoverType
 {
-	NONE_RT,
-	EMERGENCY_ROVER_RT,
+	NONE_RT = 0,
+	MOUNTAIN_ROVER_RT,
 	POLAR_ROVER_RT,
-	MOUNTAIN_ROVER_RT
+	EMERGENCY_ROVER_RT
 };
 
 class Mission;

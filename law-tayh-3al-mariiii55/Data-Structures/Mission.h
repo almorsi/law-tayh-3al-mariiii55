@@ -5,16 +5,24 @@
 class Mission :public Keyable
 {
 public:
-	MissionInputData mid{NONE_MT, 0, 0, 0, 0, 0};
+	MissionInputData mid;
 	int compeletionDay;
 	int formlationDay;
 	int assignDay;
 	int waitingDays;
 	int inExecutionDays;
-	int daysToBePromoted;
 	
-	Mission() :compeletionDay(0), formlationDay(0), assignDay(0),waitingDays(0),inExecutionDays(0),daysToBePromoted(0)
-	{}
+	Mission(MissionInputData mid, int cd, int fd, int ad, int wd, int inexd) 
+		:
+		mid(mid),
+		compeletionDay(cd), 
+		formlationDay(fd), 
+		assignDay(ad),
+		waitingDays(wd),
+		inExecutionDays(inexd)
+	{
+		//don't forget to set the key
+	}
 };
 
 #endif // !MISSIONS

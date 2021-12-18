@@ -6,11 +6,17 @@ class Rover :public Keyable
 {
 public:
 	RoverType rovertype;
-	int checkUpDuration;
 	int speed;
 	int missionsToCheckUp;
-	Rover():rovertype(NONE_RT),checkUpDuration(0),speed(0),missionsToCheckUp(0)
-	{}
+	int checkUpDuration;
+	Rover(RoverType rt, int s, int mtc, int cd)
+		:rovertype(rt),
+		speed(s),
+		missionsToCheckUp(mtc),
+		checkUpDuration(cd)
+	{
+		setKey(s);
+	}
 };
 
 #endif 

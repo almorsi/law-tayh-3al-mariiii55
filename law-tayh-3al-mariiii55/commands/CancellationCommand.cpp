@@ -1,8 +1,8 @@
 #include "CancellationCommand.h"
 
-CancellationCommand::CancellationCommand(StationData* sd, MissionInputData mcd)
+CancellationCommand::CancellationCommand(MissionInputData mcd)
 	:
-	Command(sd, mcd)
+	Command(mcd)
 {
 }
 
@@ -10,7 +10,7 @@ CancellationCommand::~CancellationCommand()
 {
 }
 
-void CancellationCommand::execute()
+void CancellationCommand::execute(StationData* sd)
 {
 	//reomve the mission with id mcd.id from mountain mission data structure
 }

@@ -17,12 +17,14 @@
 
 template class Vector<int>;
 template class Vector<Keyable*>;
+template class Vector<Command*>;
 template class MaxHeap<Keyable*>;
 template class MaxHeap<Rover*>;
 template class MaxHeap<Mission*>;
 template class MaxHeap<InExecution*>;
 template class Queue<int>;
-template class Queue<Mission*>;;
+template class Queue<Mission*>;
+template class Queue<Command*>;
 template class Vector<int>;
 template class Vector<Keyable*>;
 template class doublyNode<Mission*>;

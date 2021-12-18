@@ -5,10 +5,10 @@
 class CancellationCommand : public Command
 {
 public:
-	CancellationCommand(StationData*, MissionInputData);
+	CancellationCommand(MissionInputData);
 	virtual ~CancellationCommand();
 
-	virtual void execute();
+	virtual void execute(StationData*);
 };
 
 #endif // !CANCELLATIONCOMMAND_H

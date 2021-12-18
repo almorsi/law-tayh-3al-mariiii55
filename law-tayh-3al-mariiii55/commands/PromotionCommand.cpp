@@ -1,8 +1,8 @@
 #include "PromotionCommand.h"
 
-PromotionCommand::PromotionCommand(StationData* sd, MissionInputData mpd)
+PromotionCommand::PromotionCommand(MissionInputData mpd)
 :
-Command(sd, mpd)
+Command(mpd)
 {
 }
 
@@ -10,7 +10,7 @@ PromotionCommand::~PromotionCommand()
 {
 }
 
-void PromotionCommand::execute()
+void PromotionCommand::execute(StationData* sd)
 {
 	//reomve the mission with id mcd.id from mountain mission data structure and add it to emergency mission's data structure
 }

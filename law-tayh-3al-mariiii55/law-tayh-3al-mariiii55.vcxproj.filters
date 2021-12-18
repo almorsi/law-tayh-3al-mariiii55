@@ -82,6 +82,10 @@
     <ClCompile Include="IO\FileProcessingBehavior.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IO\InputProcessingUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\InputProcessingUnitTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
@@ -184,6 +188,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IO\FileProcessingBehavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\InputProcessingUnit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\InputProcessingUnitTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

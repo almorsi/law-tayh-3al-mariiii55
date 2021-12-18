@@ -2,6 +2,7 @@
 #include "Tests/HeapNodeTest.h"
 #include "Tests/MaxHeapTest.h"
 #include "IO/TestGenerator.h"
+#include "Tests/InputProcessingUnitTest.h"
 
 int main(void)
 {
@@ -13,6 +14,9 @@ int main(void)
 
 	MaxHeapTest mht;
 	mht.runAllTests();
+
+	InputProcessingUnitTest iput;
+	iput.runAllTests();
 
 
 	/******************************************************************

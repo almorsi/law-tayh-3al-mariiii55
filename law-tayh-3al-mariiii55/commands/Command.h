@@ -6,18 +6,16 @@
 class Command
 {
 public:
-	Command(StationData* sd, MissionInputData md)
+	Command( MissionInputData md)
 		:
-		sd(sd),
 		md(md)
 	{
 	}
 
 	virtual ~Command(){}
 
-	virtual void execute() = 0;
+	virtual void execute(StationData*) = 0;
 protected:
-	StationData* sd;
 	MissionInputData md;
 };
 
