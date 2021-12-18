@@ -6,6 +6,6 @@ class consoleProcessingBehavior :public processingBehaviour
 {
 public:
 	consoleProcessingBehavior(stationData* data);
-	Vector<int> process();
+	Vector<int>* process();
 };
 #endif 

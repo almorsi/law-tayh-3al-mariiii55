@@ -30,8 +30,10 @@
     <ClInclude Include="Data-Structures\HeapNode.h" />
     <ClInclude Include="Data-Structures\Keyable.h" />
     <ClInclude Include="Data-Structures\MaxHeap.h" />
+    <ClInclude Include="Data-Structures\Mission.h" />
     <ClInclude Include="Data-Structures\Queue.h" />
     <ClInclude Include="Data-Structures\Node.h" />
+    <ClInclude Include="Data-Structures\Rover.h" />
     <ClInclude Include="Data-Structures\SortedLinkedList.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Defs.h" />
