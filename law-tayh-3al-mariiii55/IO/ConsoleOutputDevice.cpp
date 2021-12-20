@@ -9,8 +9,7 @@ ConsoleOutputDevice::ConsoleOutputDevice(OutputProcessingUnit* opu)
 
 ConsoleOutputDevice::~ConsoleOutputDevice()
 {
-	if(behaviour)
-		delete behaviour;
+	setBehaviour(nullptr);
 }
 
 
