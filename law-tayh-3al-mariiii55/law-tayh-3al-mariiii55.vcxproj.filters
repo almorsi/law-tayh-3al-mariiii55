@@ -88,8 +88,10 @@
     <ClCompile Include="IO\FileOutputDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IO\OutputDeviceh.cpp" />
     <ClCompile Include="SimulationManager.cpp" />
+    <ClCompile Include="IO\OutputDeviceh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
