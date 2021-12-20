@@ -88,8 +88,10 @@
     <ClCompile Include="IO\FileOutputDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimulationManager.cpp" />
     <ClCompile Include="IO\OutputDeviceh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulationManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
