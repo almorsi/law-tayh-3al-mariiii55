@@ -35,8 +35,8 @@ void TestGenerator::fillInRanges()
 	checkupDuration = { 5, 15 };//days
 	missionsBeforeCheckup = { 5, 10 };
 	autoPromotionLimit = { 10, 30 };//days
-	numOfEvents = { 40, 50 };
-	eventType = { 0, 2 };
+	numOfEvents = { 20, 25 };
+	eventType = { 1, 3 };
 	targetLocation = { 100, 1000 };//kilometers
 	missionDuration = { 2, 15 };//days
 	significance = { 1, 10 };
