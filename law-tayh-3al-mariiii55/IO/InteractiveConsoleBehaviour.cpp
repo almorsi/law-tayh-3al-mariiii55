@@ -71,8 +71,7 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 			index++;
 		//14
 	}
-	else //2
-		index += 3;//5, SKIP WAITING MISSIONS
+
 
 	cout << endl << endl << data->getAt(index) << " In-Execution Missions/Rovers"; //14
 
@@ -102,7 +101,7 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 			long counter = data->getAt(index++);// 22, ASSUMING COUNTER = 3
 
 			cout << "(" << data->getAt(index++) << "/";
-			cout<< data->getAt(index++); //23/24
+			cout << data->getAt(index++); //23/24
 
 			for (long i = 0; i < counter - 1; i++)
 			{
@@ -133,8 +132,6 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 			index++;
 		//36
 	}
-	else
-		index += 3;
 
 	// AVAILABLE ROVERS
 
@@ -192,8 +189,6 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 
 		//14
 	}
-	else //2
-		index += 3;
 
 	//IN-CHECKUP ROVERS
 
@@ -250,8 +245,6 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 
 
 	}
-	else
-		index += 3;
 
 	//COMPLETED MISSIONS
 
