@@ -63,5 +63,4 @@ void InputProcessingUnitTest::sampleInputFile()
 		delete sd->emergencyRovers.extractMax();
 
 	delete sd;
-	delete inputData;
 }

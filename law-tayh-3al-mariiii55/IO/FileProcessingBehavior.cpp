@@ -1,6 +1,6 @@
 #include "FileProcessingBehavior.h"
 
-fileProcessingBehavior::fileProcessingBehavior(StationData* data) :processingBehaviour(data)
+fileProcessingBehavior::fileProcessingBehavior(StationData* data) :ProcessingBehaviour(data)
 {}
 
 Vector<int>* fileProcessingBehavior::process()
