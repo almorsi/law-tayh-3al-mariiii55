@@ -15,7 +15,7 @@ public:
 
 	virtual void notify() = 0;
 	virtual void add(Observer*) = 0;
-	virtual void remove(Observer*) = 0;
+	virtual void remove() = 0;
 
 protected:
 	Observer* observer;

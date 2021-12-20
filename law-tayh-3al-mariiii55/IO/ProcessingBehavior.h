@@ -5,14 +5,14 @@
 #include "..\Data-Structures\Mission.h"
 #include "..\Data-Structures\Rover.h"
 #include "..\Data-Structures\InExecution.h"
-class processingBehaviour
+class ProcessingBehaviour
 {
 protected:
 	StationData* mainData;
 public:
-	processingBehaviour(StationData* data) { mainData = data; }
+	ProcessingBehaviour(StationData* data) { mainData = data; }
 	virtual Vector<int>* process() = 0;
-	virtual ~processingBehaviour() {}
+	virtual ~ProcessingBehaviour() {}
 };
 
 #endif 

@@ -2,40 +2,25 @@
 #define OUTPUTPROCESSINGUNIT_H
 #include "Observable.h"
 #include "..\Data-Structures\vector.h"
-/*
-* TODO: mohamed
-* #include "OutputProcessingBehavior.h"
-* TODO: TO BE DONE LATER
-* #include "..\Data-Structures\StationData.h"
-*/
+#include "ProcessingBehavior.h"
+
 
 class OutputProcessingUnit : public Observable
 {
 public:
-	OutputProcessingUnit(/*StationData* */);
+	OutputProcessingUnit();
 	~OutputProcessingUnit();
 
 
 	virtual void notify();
 	virtual void add(Observer* obs);
-	virtual void remove(Observer* obs);
+	virtual void remove();
 
 	Vector<int>* getProcessedData();
-	void clearProcessedData();
-
-	/*
-	* the only class can change the behavior is the simulation manager
-	* void setProcessingBehavior(OutputProcessingBehavior*);
-	*/
+	void setProcessingBehavior(ProcessingBehaviour*);
 
 private:
-	Vector<int>* processedData;
-	/*
-	* OutputProcessingBehavior* processingBehavior;
-	*/
-	/*
-	* StationData* stationData;
-	*/
+	ProcessingBehaviour* processingBehavior;
 };
 #endif // !OUTPUTPROCESSINGUNIT_H
 

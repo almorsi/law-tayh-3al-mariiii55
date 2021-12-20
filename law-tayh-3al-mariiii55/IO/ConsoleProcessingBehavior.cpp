@@ -1,6 +1,6 @@
 #include "ConsoleProcessingBehavior.h"
 
-consoleProcessingBehavior::consoleProcessingBehavior(StationData* data):processingBehaviour(data)
+consoleProcessingBehavior::consoleProcessingBehavior(StationData* data):ProcessingBehaviour(data)
 {}
 
 Vector<int>* consoleProcessingBehavior::process()

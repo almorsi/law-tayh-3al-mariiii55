@@ -37,6 +37,7 @@
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Defs.h" />
     <ClInclude Include="IO\ConsoleBehaviour.h" />
+    <ClInclude Include="IO\ConsoleOutputDevice.h" />
     <ClInclude Include="IO\ConsoleProcessingBehavior.h" />
     <ClInclude Include="IO\FileInputDevice.h" />
     <ClInclude Include="IO\FileOutputDevice.h" />
@@ -72,13 +73,13 @@
     <ClCompile Include="Data-Structures\SortedLinkedList.cpp" />
     <ClCompile Include="Data-Structures\Vector.cpp" />
     <ClCompile Include="IO\ConsoleOutputDevice.cpp" />
-    <ClCompile Include="IO\ConsoleOutputDevice.h" />
     <ClCompile Include="IO\ConsoleProcessingBehavior.cpp" />
     <ClCompile Include="IO\FileInputDevice.cpp" />
     <ClCompile Include="IO\FileOutputDevice.cpp" />
     <ClCompile Include="IO\FileProcessingBehavior.cpp" />
     <ClCompile Include="IO\InputProcessingUnit.cpp" />
     <ClCompile Include="IO\InteractiveConsoleBehaviour.cpp" />
+    <ClCompile Include="IO\OutputDeviceh.cpp" />
     <ClCompile Include="IO\OutputProcessingUnit.cpp" />
     <ClCompile Include="IO\SilentConsoleBehaviour.cpp" />
     <ClCompile Include="IO\StepConsoleBehaviour.cpp" />

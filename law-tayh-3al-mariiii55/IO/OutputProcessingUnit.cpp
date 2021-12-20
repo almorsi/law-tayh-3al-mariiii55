@@ -1,15 +1,14 @@
 #include "OutputProcessingUnit.h"
 
-OutputProcessingUnit::OutputProcessingUnit(/*StationData* sd*/)
+OutputProcessingUnit::OutputProcessingUnit()
 	:
-	processedData(nullptr)
-	/*,stationData(sd)*/
+	processingBehavior(nullptr)
 {
 }
 
 OutputProcessingUnit::~OutputProcessingUnit()
 {
-	clearProcessedData();
+	setProcessingBehavior(nullptr);
 }
 
 void OutputProcessingUnit::notify()
@@ -22,28 +21,19 @@ void OutputProcessingUnit::add(Observer* obs)
 	observer = obs;
 }
 
-void OutputProcessingUnit::remove(Observer* obs)
+void OutputProcessingUnit::remove()
 {
-	obs = nullptr;
+	observer = nullptr;
 }
 
 Vector<int>* OutputProcessingUnit::getProcessedData()
 {
-	/*
-	* this function should call its behavior either file or consle
-	* after mohammed implements those behaviors then we can add
-	* the behavior as its attribute by function setProcessingBehavior()
-	* then we just
-	* return processingBehavior->process(stationData);
-	*/
-	return nullptr;
+	return processingBehavior->process();
 }
 
-void OutputProcessingUnit::clearProcessedData()
+void OutputProcessingUnit::setProcessingBehavior(ProcessingBehaviour* ph)
 {
-	if (processedData)
-	{
-		delete processedData;
-		processedData = nullptr;
-	}
+	if (processingBehavior)
+		delete processingBehavior;
+	processingBehavior = ph;
 }

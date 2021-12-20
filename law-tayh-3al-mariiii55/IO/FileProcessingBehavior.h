@@ -2,7 +2,7 @@
 #define FILE_PROCESSING_BEHAVIOR
 #include "ProcessingBehavior.h"
 
-class fileProcessingBehavior :public processingBehaviour
+class fileProcessingBehavior :public ProcessingBehaviour
 {
 public:
 	fileProcessingBehavior(StationData* data);

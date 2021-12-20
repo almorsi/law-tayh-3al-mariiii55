@@ -13,6 +13,8 @@ namespace IPU
 {
 	void buildStationData(StationData* sd, Vector<int>* inputData)
 	{
+		assert(sd && inputData);
+
 		int i, j, autoPromotionLimit, numEvents;
 
 		assert(MOUNTAIN_ROVER_RT == 1);
@@ -83,6 +85,7 @@ namespace IPU
 
 		}
 
+		delete inputData;
 	}
 
 }

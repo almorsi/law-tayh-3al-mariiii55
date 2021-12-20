@@ -8,14 +8,8 @@
 class OutputDevice : public Observer
 {
 public:
-	OutputDevice(OutputProcessingUnit* opu)
-		:
-		opu(opu),
-		processedData(nullptr)
-	{
-	}
-
-	virtual ~OutputDevice(){}
+	OutputDevice(OutputProcessingUnit* opu);
+	virtual ~OutputDevice();
 
 	virtual void update() = 0;
 	virtual void print() = 0;
