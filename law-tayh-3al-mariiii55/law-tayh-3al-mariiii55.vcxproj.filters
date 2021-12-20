@@ -203,8 +203,10 @@
     <ClInclude Include="IO\FileOutputDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\ConsoleOutputDevice.h" />
     <ClInclude Include="SimulationManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\ConsoleOutputDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
