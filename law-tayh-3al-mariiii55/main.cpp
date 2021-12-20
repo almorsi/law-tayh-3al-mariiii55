@@ -3,6 +3,7 @@
 #include "Tests/MaxHeapTest.h"
 #include "IO/TestGenerator.h"
 #include "Tests/InputProcessingUnitTest.h"
+#include "SimulationManager.h"
 
 int main(void)
 {
@@ -27,6 +28,12 @@ int main(void)
 	if (tg.canGenerateTestCase())
 		tg.generateTestCase();
 	/*****************************************************************/
+
+	SimulationManager* simulaitonManager = new SimulationManager();
+	simulaitonManager->buildSimulationDataFromFileWithName("test.txt");
+	simulaitonManager->runSimulation(INTERACTIVE_CRM);
+	simulaitonManager->writeOutputDataToFileWithName();
+	delete simulaitonManager;
 
 	return 0;
 }

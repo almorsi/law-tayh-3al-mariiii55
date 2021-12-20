@@ -89,6 +89,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IO\OutputDeviceh.cpp" />
+    <ClCompile Include="SimulationManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
@@ -203,6 +204,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IO\ConsoleOutputDevice.h" />
+    <ClInclude Include="SimulationManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

@@ -13,6 +13,14 @@ struct Range
 	int min, max;
 };
 
+enum ConsoleRunMode
+{
+	NONE_CRM,
+	INTERACTIVE_CRM,
+	STEP_CRM,
+	SILENT_CRM
+};
+
 enum EventType
 {
 	NONE_ET,
