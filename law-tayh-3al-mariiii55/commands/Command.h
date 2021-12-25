@@ -14,6 +14,7 @@ public:
 
 	virtual ~Command(){}
 
+	virtual bool isTimeToExecute(const int) const;
 	virtual void execute(StationData*) = 0;
 protected:
 	MissionInputData md;

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="commands\CancellationCommand.cpp" />
+    <ClCompile Include="commands\Command.cpp" />
     <ClCompile Include="commands\FormulationCommand.cpp" />
     <ClCompile Include="commands\PromotionCommand.cpp" />
     <ClCompile Include="Data-Structures\DataStructureDefinitions.cpp" />
@@ -73,6 +74,7 @@
     <ClCompile Include="Data-Structures\MaxHeap.cpp" />
     <ClCompile Include="Data-Structures\Queue.cpp" />
     <ClCompile Include="Data-Structures\Node.cpp" />
+    <ClCompile Include="Data-Structures\Rover.cpp" />
     <ClCompile Include="Data-Structures\SortedLinkedList.cpp" />
     <ClCompile Include="Data-Structures\Vector.cpp" />
     <ClCompile Include="IO\ConsoleOutputDevice.cpp" />
