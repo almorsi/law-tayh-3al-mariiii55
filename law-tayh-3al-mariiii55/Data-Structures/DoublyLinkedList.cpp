@@ -42,7 +42,7 @@ void doublyLinkedList<T>::insertEnd(T item)
 	else
 	{
 		doublyNode<T>* h = Head;
-		while (h->getNext() != NULL)
+		while (h->getNext() != 0)
 		{
 			h = h->getNext();
 		}
@@ -53,24 +53,27 @@ void doublyLinkedList<T>::insertEnd(T item)
 	}
 }
 
-
 template<typename T>
-void doublyLinkedList<T>::print()
+void doublyLinkedList<T>::removeItem(doublyNode<T>* X)
 {
-	/*
-	doublyNode<T>* h = Head;
-
-	while (h)
+	if (X == Head)
 	{
-		if(h==Head)
-			cout << "[" << h->getData() << "]-->";
-		else if (h->getNext() != NULL)
-			cout << "<--[" << h->getData() << "]-->";
-		else
-			cout << "<--[" << h->getData() << "]";
-		h = h->getNext();
+		Head = X->getNext();
+		X->getNext()->setPrev(nullptr);
+		delete X;
 	}
-	*/
+	else if (X == Tail)
+	{
+		Tail = X->getPrev();
+		X->getPrev()->setNext(nullptr);
+		delete X;
+	}
+	else
+	{
+		X->getPrev()->setNext(X->getNext());
+		X->getNext()->setPrev(X->getPrev());
+		delete X;
+	}
 }
 
 template<typename T>
