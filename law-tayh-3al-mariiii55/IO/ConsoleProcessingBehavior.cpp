@@ -45,13 +45,52 @@ Vector<int>* consoleProcessingBehavior::process()
 		}
 	}
 
-	//need refactoring
+
 	consolData->insertEnd(mainData->inexecutionsPairs.getSize());
-	if ((mainData->inexecutionsPairs.getSize()) == 0)
-		consolData->insertEnd(0);
-	else
+
+	int emergenacyCounter = 0;
+	int polarcounter = 0;
+	int mountainCounter = 0;
+
+	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
 	{
-		for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
+		if (mainData->inexecutionsPairs.getAt(i)->mission->mid.missionType == EMERGENCY_MISSION_MT)
+			emergenacyCounter++;
+	}
+	consolData->insertEnd(emergenacyCounter);
+	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
+	{
+		if (mainData->inexecutionsPairs.getAt(i)->mission->mid.missionType == EMERGENCY_MISSION_MT)
+		{
+			consolData->insertEnd(mainData->inexecutionsPairs.getAt(i)->mission->mid.missionId);
+			consolData->insertEnd(mainData->inexecutionsPairs.getAt(i)->rover->roverId);
+		}
+	}
+
+	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
+	{
+		if (mainData->inexecutionsPairs.getAt(i)->mission->mid.missionType == POLAR_MISSION_MT)
+			polarcounter++;
+	}
+	consolData->insertEnd(polarcounter);
+	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
+	{
+		if (mainData->inexecutionsPairs.getAt(i)->mission->mid.missionType == POLAR_MISSION_MT)
+		{
+			consolData->insertEnd(mainData->inexecutionsPairs.getAt(i)->mission->mid.missionId);
+			consolData->insertEnd(mainData->inexecutionsPairs.getAt(i)->rover->roverId);
+		}
+	}
+
+	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
+	{
+		if (mainData->inexecutionsPairs.getAt(i)->mission->mid.missionType == MOUNTAIN_MISSION_MT)
+			mountainCounter++;
+	}
+	consolData->insertEnd(mountainCounter);
+	for (int i = 0; i < mainData->inexecutionsPairs.getSize(); i++)
+	{
+		if (mainData->inexecutionsPairs.getAt(i)->mission->mid.missionType == MOUNTAIN_MISSION_MT)
 		{
 			consolData->insertEnd(mainData->inexecutionsPairs.getAt(i)->mission->mid.missionId);
 			consolData->insertEnd(mainData->inexecutionsPairs.getAt(i)->rover->roverId);
