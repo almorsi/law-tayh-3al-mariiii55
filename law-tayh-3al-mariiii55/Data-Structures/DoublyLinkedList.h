@@ -2,7 +2,6 @@
 #define _DOUBLY_LINKEDLIST
 
 #include "doublyNode.h"
-#include <iostream>
 using namespace std;
 
 template<typename T>
@@ -19,7 +18,7 @@ public:
 	doublyNode<T>* getTail();
 	int getSize();
 	void insertEnd(T item);
-	void print();
+	void removeItem(doublyNode<T>* X);
 	void deleteAll();
 	~doublyLinkedList();
 };
