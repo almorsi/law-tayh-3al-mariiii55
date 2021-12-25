@@ -16,6 +16,7 @@
 #include "SortedLinkedList.cpp"
 #include "..\commands\Command.h"
 
+int Rover::roverCounter = 0;
 template class Vector<int>;
 template class Vector<Keyable*>;
 template class Vector<Command*>;

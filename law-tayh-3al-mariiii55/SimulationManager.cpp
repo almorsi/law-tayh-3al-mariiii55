@@ -7,11 +7,15 @@ SimulationManager::SimulationManager()
 	inputDevice(nullptr),
 	outputProcssingUnit(nullptr),
 	consoleOutputDevice(nullptr),
-	fileOutputDevice(nullptr)
+	fileOutputDevice(nullptr),
+	logicalProcssingUnit(nullptr)
 {
 	inputDevice = new FileInputDevice();
 	stationData = new StationData();
 	outputProcssingUnit = new OutputProcessingUnit();
+
+	assert(stationData);
+	logicalProcssingUnit = new LogicaProcessingUnit(stationData);
 
 	assert(outputProcssingUnit);
 	consoleOutputDevice = new ConsoleOutputDevice(outputProcssingUnit);
@@ -59,7 +63,7 @@ void SimulationManager::runSimulation(ConsoleRunMode crm)
 
 	while (!simulationFinished())
 	{
-		//do logical processing unit
+		logicalProcssingUnit->updateStationData();
 		outputProcssingUnit->notify();
 		consoleOutputDevice->print();
 	}
@@ -91,5 +95,9 @@ void SimulationManager::writeOutputDataToFileWithName()
 
 bool SimulationManager::simulationFinished() const
 {
-	return true;// initialy to true until the logical processing unit is implemented
+	return stationData->commands.isEmpty()&&
+		stationData->inexecutionsPairs.isEmpty()&&
+		stationData->emergencyMissions.isEmpty()&&
+		stationData->mountainMissions.getSize() == 0&&
+		stationData->polarMissions.isEmpty();// initialy to true until the logical processing unit is implemented
 }

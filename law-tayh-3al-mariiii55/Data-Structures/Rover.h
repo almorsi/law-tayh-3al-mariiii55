@@ -4,11 +4,13 @@
 #include "Keyable.h"
 class Rover :public Keyable
 {
+	static int roverCounter;
 private:
 	int defaultMissionsToCheckUp;
 	int defaultCheckUpDuration;
 public:
 	RoverType rovertype;
+	int roverId;
 	int speed;
 	int missionsToCheckUp;
 	int checkUpDuration;
@@ -21,6 +23,8 @@ public:
 		setKey(speed);
 		defaultMissionsToCheckUp = missionsToCheckUp;
 		defaultCheckUpDuration = checkUpDuration;
+		roverId = ++roverCounter;
+
 	}
 	void resetMissionsToCheckUp();
 	void resetCheckUpDuration();

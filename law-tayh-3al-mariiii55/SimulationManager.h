@@ -12,6 +12,7 @@
 #include "IO\InteractiveConsoleBehaviour.h"
 #include "IO\SilentConsoleBehaviour.h"
 #include "IO\StepConsoleBehaviour.h"
+#include "Logic-Unit\LogicalProcessingUnit.h"
 
 class SimulationManager
 {
@@ -29,7 +30,7 @@ private:
 private:
 	StationData* stationData;
 	InputDevice* inputDevice;
-	//LogicalProcssingUnit
+	LogicaProcessingUnit* logicalProcssingUnit;
 	OutputProcessingUnit* outputProcssingUnit;
 	ConsoleOutputDevice* consoleOutputDevice;
 	FileOutputDevice* fileOutputDevice;
