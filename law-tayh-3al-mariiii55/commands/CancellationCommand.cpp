@@ -23,7 +23,8 @@ void CancellationCommand::execute(StationData* sd)
 	{
 		if (current->getData()->mid.missionId == md.missionId)
 		{
-			 sd->mountainMissions.removeItem(current);
+			delete current->getData();
+			sd->mountainMissions.removeItem(current);
 			break;
 		}
 		current = current->getNext();
