@@ -61,18 +61,21 @@ void doublyLinkedList<T>::removeItem(doublyNode<T>* X)
 		Head = X->getNext();
 		X->getNext()->setPrev(nullptr);
 		delete X;
+		size--;
 	}
 	else if (X == Tail)
 	{
 		Tail = X->getPrev();
 		X->getPrev()->setNext(nullptr);
 		delete X;
+		size--;
 	}
 	else
 	{
 		X->getPrev()->setNext(X->getNext());
 		X->getNext()->setPrev(X->getPrev());
 		delete X;
+		size--;
 	}
 }
 
