@@ -15,7 +15,7 @@ public:
 		missionsToCheckUp(mtc),
 		checkUpDuration(cd)
 	{
-		setKey(s);
+		setKey(speed);
 	}
 };
 

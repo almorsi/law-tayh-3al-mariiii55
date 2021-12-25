@@ -94,6 +94,9 @@
     <ClCompile Include="SimulationManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Logic-Unit\LogicalProcessingUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
@@ -214,6 +217,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Data-Structures\StationData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic-Unit\LogicalProcessingUnit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

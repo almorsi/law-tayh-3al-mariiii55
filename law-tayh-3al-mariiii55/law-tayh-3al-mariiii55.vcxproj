@@ -54,6 +54,7 @@
     <ClInclude Include="IO\SilentConsoleBehaviour.h" />
     <ClInclude Include="IO\StepConsoleBehaviour.h" />
     <ClInclude Include="IO\TestGenerator.h" />
+    <ClInclude Include="Logic-Unit\LogicalProcessingUnit.h" />
     <ClInclude Include="SimulationManager.h" />
     <ClInclude Include="Tests\HeapNodeTest.h" />
     <ClInclude Include="Tests\InputProcessingUnitTest.h" />
@@ -86,6 +87,7 @@
     <ClCompile Include="IO\SilentConsoleBehaviour.cpp" />
     <ClCompile Include="IO\StepConsoleBehaviour.cpp" />
     <ClCompile Include="IO\TestGenerator.cpp" />
+    <ClCompile Include="Logic-Unit\LogicalProcessingUnit.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SimulationManager.cpp" />
     <ClCompile Include="Tests\HeapNodeTest.cpp" />
