@@ -14,6 +14,7 @@
 #include "Node.cpp"
 #include "SortedLinkedList.h"
 #include "SortedLinkedList.cpp"
+#include "..\commands\Command.h"
 
 template class Vector<int>;
 template class Vector<Keyable*>;
