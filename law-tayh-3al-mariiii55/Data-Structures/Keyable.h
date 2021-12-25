@@ -9,6 +9,7 @@ public:
 	virtual void setKey(long);
 	virtual long getKey() const;
 	virtual void increaseKeyBy(long);
+	virtual void decrementKeyBy(long);
 protected:
 	long key{ -1 };
 };

@@ -5,11 +5,16 @@
 class InExecution :public Keyable
 {
 public:
-	//key in keyable class is days to finish
+
 	Mission* mission;
 	Rover* rover;
-	InExecution():mission(nullptr),rover(nullptr)
-	{}
+	InExecution(Mission* m, Rover* r, int numDaysToFinish)
+		:
+		mission(m),
+		rover(r)
+	{
+		setKey(numDaysToFinish);
+	}
 };
 
 #endif // !IN_EXECUTION

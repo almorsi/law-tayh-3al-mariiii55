@@ -28,3 +28,8 @@ void Keyable::increaseKeyBy(long dk)
 
 	setKey(key + dk);
 }
+
+void Keyable::decrementKeyBy(long dk)
+{
+	increaseKeyBy(-dk);
+}
