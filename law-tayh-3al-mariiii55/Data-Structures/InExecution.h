@@ -8,7 +8,7 @@ public:
 	//key in keyable class is days to finish
 	Mission* mission;
 	Rover* rover;
-	InExecution():mission(NULL),rover(NULL)
+	InExecution():mission(nullptr),rover(nullptr)
 	{}
 };
 

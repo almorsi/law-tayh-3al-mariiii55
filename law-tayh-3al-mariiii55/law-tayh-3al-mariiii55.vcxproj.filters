@@ -213,6 +213,9 @@
     <ClInclude Include="IO\ConsoleOutputDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Data-Structures\StationData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

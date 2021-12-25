@@ -1,5 +1,5 @@
 #include "CancellationCommand.h"
-
+#include "..\Data-Structures\StationData.h"
 CancellationCommand::CancellationCommand(MissionInputData mcd)
 	:
 	Command(mcd)
