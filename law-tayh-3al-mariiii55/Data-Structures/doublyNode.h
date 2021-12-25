@@ -19,6 +19,7 @@ public:
 	void setNext(doublyNode<T>* nxt);
 	void setPrev(doublyNode<T>* prv);
 
+	~doublyNode();
 };
 
 #endif

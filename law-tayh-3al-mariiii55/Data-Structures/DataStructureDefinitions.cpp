@@ -28,7 +28,6 @@ template class Queue<Command*>;
 template class Vector<int>;
 template class Vector<Keyable*>;
 template class doublyNode<Mission*>;
-template class doublyLinkedList<int>;
 template class doublyLinkedList<Keyable*>;
 template class doublyLinkedList<Mission*>;
 template class SortedLinkedList<Mission*>;
