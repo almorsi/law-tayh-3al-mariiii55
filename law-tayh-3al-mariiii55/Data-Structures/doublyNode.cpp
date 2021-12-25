@@ -54,5 +54,4 @@ void doublyNode<T>::setPrev(doublyNode<T>* prv)
 template<typename T>
 doublyNode<T>::~doublyNode()
 {
-	delete data;
 }
