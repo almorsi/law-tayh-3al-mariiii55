@@ -1,9 +1,12 @@
 #ifndef ROVER
 #define ROVER
 #include "..\Defs.h"
-
+#include "Keyable.h"
 class Rover :public Keyable
 {
+private:
+	int defaultMissionsToCheckUp;
+	int defaultCheckUpDuration;
 public:
 	RoverType rovertype;
 	int speed;
@@ -16,7 +19,11 @@ public:
 		checkUpDuration(cd)
 	{
 		setKey(speed);
+		defaultMissionsToCheckUp = missionsToCheckUp;
+		defaultCheckUpDuration = checkUpDuration;
 	}
+	void resetMissionsToCheckUp();
+	void resetCheckUpDuration();
 };
 
 #endif 
