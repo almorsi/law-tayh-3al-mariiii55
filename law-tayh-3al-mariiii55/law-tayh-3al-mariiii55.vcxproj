@@ -34,6 +34,7 @@
     <ClInclude Include="Data-Structures\Node.h" />
     <ClInclude Include="Data-Structures\Rover.h" />
     <ClInclude Include="Data-Structures\SortedLinkedList.h" />
+    <ClInclude Include="Data-Structures\StationData.h" />
     <ClInclude Include="Data-Structures\Vector.h" />
     <ClInclude Include="Defs.h" />
     <ClInclude Include="IO\ConsoleBehaviour.h" />

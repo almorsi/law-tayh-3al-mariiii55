@@ -5,6 +5,7 @@
 #include "..\Data-Structures\Mission.h"
 #include "..\Data-Structures\Rover.h"
 #include "..\Data-Structures\InExecution.h"
+#include "..\Data-Structures\StationData.h"
 class ProcessingBehaviour
 {
 protected:

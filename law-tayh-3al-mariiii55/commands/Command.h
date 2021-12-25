@@ -1,7 +1,7 @@
 #ifndef COMMAND_H
 #define COMMAND_H
-
 #include "..\Defs.h"
+struct StationData;
 
 class Command
 {

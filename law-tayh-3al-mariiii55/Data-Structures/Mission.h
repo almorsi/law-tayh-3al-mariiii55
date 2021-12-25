@@ -1,5 +1,6 @@
 #ifndef MISSION
 #define MISSION
+#include "Keyable.h"
 #include "..\Defs.h"
 
 class Mission :public Keyable
@@ -21,9 +22,8 @@ public:
 		waitingDays(wd),
 		inExecutionDays(inexd)
 	{
-		//don't forget to set the key
+		setKey(mid.significance);
 	}
 };
 
 #endif // !MISSIONS
-
