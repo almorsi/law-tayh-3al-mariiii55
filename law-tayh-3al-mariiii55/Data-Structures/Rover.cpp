@@ -3,12 +3,12 @@
 
 void Rover::resetMissionsToCheckUp()
 {
-	assert(missionsToCheckUp == 0);
+	//assert(missionsToCheckUp == 0);
 	missionsToCheckUp = defaultMissionsToCheckUp;
 }
 
 void Rover::resetCheckUpDuration()
 {
-	assert(checkUpDuration == 0);
+	//assert(checkUpDuration == 0);
 	checkUpDuration = defaultCheckUpDuration;
 }

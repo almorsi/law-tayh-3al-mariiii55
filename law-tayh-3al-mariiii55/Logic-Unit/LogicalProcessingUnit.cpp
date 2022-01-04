@@ -121,6 +121,7 @@ void LogicaProcessingUnit::assignPairs()
 	int inExday = 0;
 	Mission* mis;
 	Rover* rov;
+
 	while (!sd->emergencyMissions.isEmpty())
 	{
 		mis = sd->emergencyMissions.getMax();
@@ -160,6 +161,7 @@ void LogicaProcessingUnit::assignPairs()
 		InExecution* em = new InExecution(sd->polarMissions.dequeue(), sd->polarRovers.extractMax(), -1 * inExday);
 		sd->inexecutionsPairs.insert(em);
 	}
+
 	while(sd->mountainMissions.getSize() > 0)
 	{
 		if (!sd->mountainRovers.isEmpty())
@@ -170,8 +172,9 @@ void LogicaProcessingUnit::assignPairs()
 			mis->waitingDays = mis->assignDay - mis->formlationDay;
 			rov = sd->mountainRovers.getMax();
 			inExday = (2 * mis->mid.targetLocation / rov->speed) / 25 + mis->mid.missionDuration;
-			InExecution* em = new InExecution(mis, sd->mountainRovers.extractMax(), inExday);
+			InExecution* em = new InExecution(mis, sd->mountainRovers.extractMax(), -1 * inExday);
 			sd->mountainMissions.removeItem(h);
+			sd->inexecutionsPairs.insert(em);
 		}
 		else if (!sd->emergencyRovers.isEmpty())
 		{
@@ -181,8 +184,9 @@ void LogicaProcessingUnit::assignPairs()
 			mis->waitingDays = mis->assignDay - mis->formlationDay;
 			rov = sd->emergencyRovers.getMax();
 			inExday = (2 * mis->mid.targetLocation / rov->speed) / 25 + mis->mid.missionDuration;
-			InExecution* em = new InExecution(mis, sd->emergencyRovers.extractMax(), inExday);
+			InExecution* em = new InExecution(mis, sd->emergencyRovers.extractMax(), -1 * inExday);
 			sd->mountainMissions.removeItem(h);
+			sd->inexecutionsPairs.insert(em);
 		}
 		else
 			return;

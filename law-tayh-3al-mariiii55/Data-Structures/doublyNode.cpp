@@ -24,6 +24,7 @@ T doublyNode<T>::getData()
 template<typename T>
 doublyNode<T>* doublyNode<T>::getNext()
 {
+
 	return next;
 }
 

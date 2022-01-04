@@ -33,24 +33,16 @@ void doublyLinkedList<T>::insertEnd(T item)
 	doublyNode<T>* X = new doublyNode<T>(item);
 	if (Head == nullptr)
 	{
-		X->setNext(Tail);
-		X->setPrev(Head);
 		Head = X;
 		Tail = X;
-		size++;
 	}
 	else
 	{
-		doublyNode<T>* h = Head;
-		while (h->getNext() != 0)
-		{
-			h = h->getNext();
-		}
-		X->setPrev(h);
-		h->setNext(X);
+		Tail->setNext(X);
+		X->setPrev(Tail);
 		Tail = X;
-		size++;
 	}
+	size++;
 }
 
 template<typename T>
@@ -59,24 +51,22 @@ void doublyLinkedList<T>::removeItem(doublyNode<T>* X)
 	if (X == Head)
 	{
 		Head = X->getNext();
-		X->getNext()->setPrev(nullptr);
-		delete X;
-		size--;
+		if(Head)
+			Head->setPrev(nullptr);
 	}
 	else if (X == Tail)
 	{
 		Tail = X->getPrev();
-		X->getPrev()->setNext(nullptr);
-		delete X;
-		size--;
+		if(Tail)
+			Tail->setNext(nullptr);
 	}
 	else
 	{
 		X->getPrev()->setNext(X->getNext());
 		X->getNext()->setPrev(X->getPrev());
-		delete X;
-		size--;
 	}
+	delete X;
+	size--;
 }
 
 template<typename T>
