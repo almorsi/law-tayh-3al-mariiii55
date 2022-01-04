@@ -23,8 +23,8 @@ long Keyable::getKey() const
 
 void Keyable::increaseKeyBy(long dk)
 {
-	if (dk > LONG_MAX - key)
-		throw "overflow";
+	//if (dk > LONG_MAX - key)
+	//	throw "overflow";
 
 	setKey(key + dk);
 }

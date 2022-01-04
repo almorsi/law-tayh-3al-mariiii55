@@ -1,3 +1,4 @@
+#include <cassert>
 #include "ConsoleProcessingBehavior.h"
 
 consoleProcessingBehavior::consoleProcessingBehavior(StationData* data) :ProcessingBehaviour(data)
@@ -9,7 +10,9 @@ Vector<int>* consoleProcessingBehavior::process()
 
 	consolData->insertBegin(mainData->currentDay);
 
-	int numOfWaitingMissions = mainData->mountainMissions.getSize() + mainData->emergencyMissions.getSize() + mainData->polarMissions.getLength();
+	int numOfWaitingMissions = mainData->mountainMissions.getSize() + 
+								mainData->emergencyMissions.getSize() + 
+									mainData->polarMissions.getLength();
 
 	consolData->insertEnd(numOfWaitingMissions);
 
@@ -99,7 +102,10 @@ Vector<int>* consoleProcessingBehavior::process()
 	///////////////////////////////
 
 
-	int numOfAvaliableRovers = mainData->emergencyRovers.getSize() + mainData->mountainRovers.getSize() + mainData->polarRovers.getSize();
+	int numOfAvaliableRovers = mainData->emergencyRovers.getSize() + 
+								mainData->mountainRovers.getSize() + 
+								mainData->polarRovers.getSize();
+
 	consolData->insertEnd(numOfAvaliableRovers);
 	if ((mainData->emergencyRovers.getSize()) == 0)
 		consolData->insertEnd(0);
@@ -135,56 +141,54 @@ Vector<int>* consoleProcessingBehavior::process()
 	}
 
 
-	consolData->insertEnd(mainData->inCheckUp_ERovers.getSize() + mainData->inCheckUp_MRovers.getSize() + mainData->inCheckUp_PRovers.getSize());
-	if ((mainData->inCheckUp_ERovers.getSize() + mainData->inCheckUp_MRovers.getSize() + mainData->inCheckUp_PRovers.getSize()) == 0)
-		consolData->insertEnd(0);
-	else
-	{
-		consolData->insertEnd(mainData->inCheckUp_ERovers.getSize());
-		if ((mainData->inCheckUp_ERovers.getSize()) == 0)
-			consolData->insertEnd(0);
-		else
-		{
-			for (int i = 0; i < mainData->inCheckUp_ERovers.getSize(); i++)
-			{
-				consolData->insertEnd(mainData->inCheckUp_ERovers.getAt(i)->getKey());
-			}
-		}
+	int numOfInCheckUpRovers =  mainData->inCheckUp_ERovers.getSize() + 
+								mainData->inCheckUp_MRovers.getSize() + 
+								mainData->inCheckUp_PRovers.getSize();
 
-		consolData->insertEnd(mainData->inCheckUp_PRovers.getSize());
-		if ((mainData->inCheckUp_PRovers.getSize()) == 0)
-			consolData->insertEnd(0);
-		else
-		{
-			for (int i = 0; i < mainData->inCheckUp_PRovers.getSize(); i++)
-			{
-				consolData->insertEnd(mainData->inCheckUp_PRovers.getAt(i)->getKey());
-			}
-		}
+	consolData->insertEnd(numOfInCheckUpRovers);
 
-		consolData->insertEnd(mainData->inCheckUp_MRovers.getSize());
-		if ((mainData->inCheckUp_MRovers.getSize()) == 0)
-			consolData->insertEnd(0);
-		else
-		{
-			for (int i = 0; i < mainData->inCheckUp_MRovers.getSize(); i++)
-			{
-				consolData->insertEnd(mainData->inCheckUp_MRovers.getAt(i)->getKey());
-			}
-		}
-	}
+	consolData->insertEnd(mainData->inCheckUp_ERovers.getSize());
+	for (int i = 0; i < mainData->inCheckUp_ERovers.getSize(); i++)
+		consolData->insertEnd(mainData->inCheckUp_ERovers.getAt(i)->roverId);
+	
+	consolData->insertEnd(mainData->inCheckUp_PRovers.getSize());
+	for (int i = 0; i < mainData->inCheckUp_PRovers.getSize(); i++)
+		consolData->insertEnd(mainData->inCheckUp_PRovers.getAt(i)->roverId);
+	
+	consolData->insertEnd(mainData->inCheckUp_MRovers.getSize());
+	for (int i = 0; i < mainData->inCheckUp_MRovers.getSize(); i++)
+		consolData->insertEnd(mainData->inCheckUp_MRovers.getAt(i)->roverId);
+	
 
 	consolData->insertEnd(mainData->completedMissions.getSize());
-	if ((mainData->completedMissions.getSize()) == 0)
-		consolData->insertEnd(0);
-	else
+	Vector<int> completedEmergencyMissions;
+	Vector<int> completedMountainMissions;
+	Vector<int> completedPolarMissions;
+	Node<Mission*>* a = mainData->completedMissions.getHead();
+	//emerg, polar, mountain
+	while (a)
 	{
-		Node<Mission*>* a = mainData->completedMissions.getHead();
-		while (a)
-		{
-			consolData->insertEnd(a->getData()->getKey());
-			a = a->getNext();
-		}
+		if (a->getData()->mid.missionType == EMERGENCY_MISSION_MT)
+			completedEmergencyMissions.insertEnd(a->getData()->mid.missionId);
+		else if (a->getData()->mid.missionType == MOUNTAIN_MISSION_MT)
+			completedMountainMissions.insertEnd(a->getData()->mid.missionId);
+		else if (a->getData()->mid.missionType == POLAR_MISSION_MT)
+			completedPolarMissions.insertEnd(a->getData()->mid.missionId);
+		else
+			assert(false);	
+		a = a->getNext();
 	}
+	consolData->insertEnd(completedEmergencyMissions.getLength());
+	for (int i = 0; i < completedEmergencyMissions.getLength(); i++)
+		consolData->insertEnd(completedEmergencyMissions.getAt(i));
+
+	consolData->insertEnd(completedPolarMissions.getLength());
+	for (int i = 0; i < completedPolarMissions.getLength(); i++)
+		consolData->insertEnd(completedPolarMissions.getAt(i));
+
+	consolData->insertEnd(completedMountainMissions.getLength());
+	for (int i = 0; i < completedMountainMissions.getLength(); i++)
+		consolData->insertEnd(completedMountainMissions.getAt(i));
+
 	return consolData;
 }

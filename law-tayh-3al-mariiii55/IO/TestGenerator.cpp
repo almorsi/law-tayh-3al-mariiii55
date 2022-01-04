@@ -29,13 +29,12 @@ bool TestGenerator::canGenerateTestCase() const
 
 void TestGenerator::fillInRanges()
 {
-	rover = { 15, 30 };
+	rover = { 1, 3 };
 	roverSpeed = { 10, 20 };//kilometeres/hour
-	missionsBeforeCheckup = { 5, 20 };
+	missionsBeforeCheckup = { 2, 3 };
 	checkupDuration = { 5, 15 };//days
-	missionsBeforeCheckup = { 5, 10 };
-	autoPromotionLimit = { 10, 30 };//days
-	numOfEvents = { 20, 25 };
+	autoPromotionLimit = { 1, 3 };//days
+	numOfEvents = { 10, 40 };
 	eventType = { 1, 3 };
 	targetLocation = { 100, 1000 };//kilometers
 	missionDuration = { 2, 15 };//days

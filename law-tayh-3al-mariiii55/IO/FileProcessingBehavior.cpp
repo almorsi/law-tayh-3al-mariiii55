@@ -6,11 +6,21 @@ fileProcessingBehavior::fileProcessingBehavior(StationData* data) :ProcessingBeh
 Vector<int>* fileProcessingBehavior::process()
 {
 	Vector<int>* fileData = new Vector<int>;
-	int numMountainMissions, numPolarMissions, numEmergMissions, numWaitingDays, numExecutionDays, numMountainRovers, numPolarRovers, numEmergRovers;
+	int numMountainMissions, numPolarMissions, 
+		numEmergMissions, numWaitingDays, 
+		numExecutionDays, numMountainRovers, 
+		numPolarRovers, numEmergRovers;
 	float avgWait, avgExec, autoPromote;
 
 	fileData->insertEnd(mainData->completedMissions.getSize());
-	numMountainMissions = numPolarMissions = numEmergMissions = numWaitingDays = numExecutionDays = numMountainRovers = numPolarRovers = numEmergRovers = 0;
+	numMountainMissions = 
+		numPolarMissions = 
+		numEmergMissions = 
+		numWaitingDays = 
+		numExecutionDays = 
+		numMountainRovers = 
+		numPolarRovers = 
+		numEmergRovers = 0;
 
 	Node<Mission*>* temp = mainData->completedMissions.getHead();
 	while (temp)
@@ -34,7 +44,7 @@ Vector<int>* fileProcessingBehavior::process()
 		temp = temp->getNext();
 	}
 
-	fileData->insertEnd(numEmergMissions + numPolarMissions + numEmergMissions);
+	fileData->insertEnd(numEmergMissions + numPolarMissions + numMountainMissions);
 	fileData->insertEnd(numMountainMissions);
 	fileData->insertEnd(numPolarMissions);
 	fileData->insertEnd(numEmergMissions);

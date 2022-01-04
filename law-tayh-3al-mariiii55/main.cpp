@@ -24,11 +24,13 @@ int main(void)
 	 * will generate an input file in the format reqiured, 
 	 * we can use this generated file to be the input of our simulation
 	 */
+	/*
 	TestGenerator tg("test.txt");
 	if (tg.canGenerateTestCase())
 		tg.generateTestCase();
+	*/
 	/*****************************************************************/
-
+	
 	SimulationManager* simulaitonManager = new SimulationManager();
 	simulaitonManager->buildSimulationDataFromFileWithName("test.txt");
 	simulaitonManager->runSimulation(INTERACTIVE_CRM);
