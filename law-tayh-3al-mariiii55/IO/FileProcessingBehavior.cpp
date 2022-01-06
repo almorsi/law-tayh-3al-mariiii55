@@ -66,7 +66,9 @@ Vector<int>* fileProcessingBehavior::process()
 	fileData->insertEnd(int(avgExec));
 	fileData->insertEnd(int( ( avgExec - int(avgExec) ) * 100) );
 
-	autoPromote = (mainData->mountainMissions.getSize() / float(1) ) * 100;//instead of 1 waitning for atuomatically prommated missions 
+
+	autoPromote = (mainData->promotedMissions/ float(numMountainMissions+
+		                                            mainData->promotedMissions))* 100;
 	fileData->insertEnd(int(autoPromote));
 
 	return fileData;

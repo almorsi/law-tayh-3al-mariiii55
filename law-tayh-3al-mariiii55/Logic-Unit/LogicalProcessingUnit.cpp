@@ -21,7 +21,10 @@ void LogicaProcessingUnit::updateStationData()
 	retrieveArrivedRovers();
 	executeEvent();
 	assignPairs();
+	updateWaitingDays();
+	promoteMountainMissions();
 }
+
 
 void LogicaProcessingUnit::retrieveRoversFromCheckUp()
 {
@@ -189,6 +192,66 @@ void LogicaProcessingUnit::assignPairs()
 			sd->inexecutionsPairs.insert(em);
 		}
 		else
+		{
+			doublyNode<Mission*>* h = sd->mountainMissions.getHead();
 			return;
+		}
 	}
+}
+
+void LogicaProcessingUnit::updateWaitingDays()
+{
+	Mission* mission;
+	for (int i = 0; i < sd->emergencyMissions.getSize(); i++)
+	{
+		mission = sd->emergencyMissions.getAt(i);
+		if (mission->formlationDay < sd->currentDay && mission->assignDay != sd->currentDay)
+			mission->waitingDays = sd->currentDay - mission->formlationDay;
+	}
+
+	//polar missions waiting days does not need it to be updated daily as it is aleardy calculated in assignPairs()
+
+	doublyNode<Mission*>* h = sd->mountainMissions.getHead();
+	while (h)
+	{
+		mission = h->getData();
+		if (mission->formlationDay < sd->currentDay && mission->assignDay != sd->currentDay)
+			mission->waitingDays = sd->currentDay - mission->formlationDay;
+		h = h->getNext();
+	}
+			
+}
+
+void LogicaProcessingUnit::promoteMountainMissions()
+{
+	bool flag = 0;
+	if (sd->mountainMissions.getSize() != 0)
+	{
+		doublyNode<Mission*>* current = sd->mountainMissions.getHead();
+		while (current)
+		{
+			flag = 0;
+			if (current->getData()->mid.daysToBePromoted <= current->getData()->waitingDays)
+			{
+				current->getData()->mid.missionType = EMERGENCY_MISSION_MT;
+				sd->emergencyMissions.insert(current->getData());
+				(sd->promotedMissions)++;
+				if (current->getNext())
+				{
+					current = current->getNext();
+					sd->mountainMissions.removeItem(current->getPrev());
+					flag = 1;
+				}
+				else
+				{
+					sd->mountainMissions.removeItem(current);
+					break;
+					flag = 1;
+				}
+			}
+			if(flag==0)
+				current = current->getNext();
+		}
+	}
+	
 }

@@ -11,6 +11,7 @@
 struct StationData
 {
 	int currentDay;
+	int promotedMissions;
 
 	MaxHeap<Mission*> emergencyMissions;
 	doublyLinkedList<Mission*> mountainMissions;

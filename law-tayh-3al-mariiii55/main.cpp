@@ -28,12 +28,14 @@ int main(void)
 	TestGenerator tg("test.txt");
 	if (tg.canGenerateTestCase())
 		tg.generateTestCase();
+	
 	*/
+
 	/*****************************************************************/
 	
 	SimulationManager* simulaitonManager = new SimulationManager();
 	simulaitonManager->buildSimulationDataFromFileWithName("test.txt");
-	simulaitonManager->runSimulation(INTERACTIVE_CRM);
+	simulaitonManager->runSimulation(SILENT_CRM);
 	simulaitonManager->writeOutputDataToFileWithName();
 	delete simulaitonManager;
 
