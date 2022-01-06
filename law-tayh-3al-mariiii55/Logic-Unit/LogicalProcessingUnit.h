@@ -13,6 +13,8 @@ private:
 	void retrieveArrivedRovers();
 	void executeEvent();
 	void assignPairs();
+	void updateWaitingDays();
+	void promoteMountainMissions();
 
 private:
 	StationData* sd;

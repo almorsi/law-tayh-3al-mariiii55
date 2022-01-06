@@ -22,9 +22,11 @@ Vector<int>* consoleProcessingBehavior::process()
 	else
 	{
 		consolData->insertEnd(mainData->emergencyMissions.getSize());
-		for (int i = 0; i < mainData->emergencyMissions.getSize(); i++)
+		for (int i = 0; i < mainData->emergencyMissions.getSize(); i++)					
 			consolData->insertEnd(mainData->emergencyMissions.getAt(i)->mid.missionId);
 	}
+
+	Mission* poMission;
 
 	if ((mainData->polarMissions.getLength()) == 0)
 		consolData->insertEnd(0);
@@ -32,7 +34,11 @@ Vector<int>* consoleProcessingBehavior::process()
 	{
 		consolData->insertEnd(mainData->polarMissions.getLength());
 		for (int i = 0; i < mainData->polarMissions.getLength(); i++)
-			consolData->insertEnd(mainData->polarMissions.getFront()->mid.missionId);
+		{
+			poMission= mainData->polarMissions.dequeue();
+			consolData->insertEnd(poMission->mid.missionId);
+			mainData->polarMissions.enqueue(poMission);
+		}
 	}
 
 	if ((mainData->mountainMissions.getSize()) == 0)
