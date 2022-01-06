@@ -17,7 +17,7 @@ void StepConsoleBehaviour::print(Vector<int>* data)
 	}
 	long index = 0;
 
-	cout << "Current Day: " << data->getAt(index++) << endl; // INDEX = 0
+	cout << "Current Day: " << data->getAt(index++) << endl << endl; // INDEX = 0
 
 	cout << data->getAt(index) << " Waiting Missions";//1
 
@@ -307,8 +307,7 @@ void StepConsoleBehaviour::print(Vector<int>* data)
 		else
 			index++;
 	}
-
-
+	cout << "\n------------------------------------------------------------------\n";
 
 	Sleep(1000);
 }

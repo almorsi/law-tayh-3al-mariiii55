@@ -16,7 +16,7 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 	}
 	long index = 0;
 
-	cout << "Current Day: " << data->getAt(index++) << endl; // INDEX = 0
+	cout << "Current Day: " << data->getAt(index++) << endl<<endl; // INDEX = 0
 
 	cout << data->getAt(index) << " Waiting Missions";//1
 
@@ -306,7 +306,6 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 		else
 			index++;
 	}
-
 
 	cout << "\n\nPress any key to continue\n";
 	cin.get();

@@ -35,7 +35,27 @@ int main(void)
 	
 	SimulationManager* simulaitonManager = new SimulationManager();
 	simulaitonManager->buildSimulationDataFromFileWithName("test.txt");
-	simulaitonManager->runSimulation(SILENT_CRM);
+
+	int x = 0;
+	cout << "Please choose simulation mode:" << endl << "1-Silent mode" << endl << "2-Step mode" << endl << "3-Interactive mode" << endl;
+	cin >> x;
+	cout << endl;
+	do
+	{
+		if (x == 1)
+			simulaitonManager->runSimulation(SILENT_CRM);
+		else if (x == 2)
+			simulaitonManager->runSimulation(STEP_CRM);
+		else if (x == 3)
+			simulaitonManager->runSimulation(INTERACTIVE_CRM);
+		else
+		{
+			cout << "Wrong input please enter correct input: ";
+			cin >> x;
+			cout << endl;
+		}
+	} while (x != 1 && x != 2 && x != 3);
+
 	simulaitonManager->writeOutputDataToFileWithName();
 	delete simulaitonManager;
 
