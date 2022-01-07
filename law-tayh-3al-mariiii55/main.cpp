@@ -1,24 +1,8 @@
-#include "Tests/VectorTest.h"
-#include "Tests/HeapNodeTest.h"
-#include "Tests/MaxHeapTest.h"
 #include "IO/TestGenerator.h"
-#include "Tests/InputProcessingUnitTest.h"
 #include "SimulationManager.h"
 
 int main(void)
 {
-	VectorTest vt;
-	vt.runAllTests();
-
-	HeapNodeTest hnt;
-	hnt.runAllTests();
-
-	MaxHeapTest mht;
-	mht.runAllTests();
-
-	InputProcessingUnitTest iput;
-	iput.runAllTests();
-
 
 	/******************************************************************
 	 * will generate an input file in the format reqiured, 
