@@ -307,6 +307,7 @@ void InteractiveConsoleBehaviour::print(Vector<int>* data)
 			index++;
 	}
 
+	cin.ignore();
 	cout << "\n\nPress any key to continue\n";
 	cin.get();
 }
