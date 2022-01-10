@@ -24,3 +24,6 @@ We have Interactive, Step by Step, and Silent modes.
 <!-- ROADMAP -->
 ## Roadmap
 If you want to know how we divide the work please refere to the **Project section**
+
+<!-- Document -->
+Refer to the project document [here](https://docs.google.com/document/d/1slJYMvqXhukXwLSVhLEy-tEZ7N3maQ4otU-Q3fTG_as/edit)
