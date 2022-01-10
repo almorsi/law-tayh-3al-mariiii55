@@ -97,8 +97,12 @@
     <ClCompile Include="Logic-Unit\LogicalProcessingUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="commands\Command.cpp" />
-    <ClCompile Include="Data-Structures\Rover.cpp" />
+    <ClCompile Include="commands\Command.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data-Structures\Rover.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commands\CancellationCommand.h">
